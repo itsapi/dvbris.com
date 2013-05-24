@@ -1,11 +1,3 @@
-#container_left {
-	position: absolute;
-	left: 10%;
-}
-#container_right {
-	position: absolute;
-	right: 10%;
-}
 .text {
 	width: 500px;
 	font-family: monospace;
