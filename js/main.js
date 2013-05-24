@@ -25,11 +25,12 @@ $(window).resize(function(){
 		$('#container_right').css({
 			position: 'absolute',
 			top: $('#container_left').outerHeight()+$(window).width()/5,
-			right: ($(window).width() - $('#container_right').outerWidth())/2
+			right: ($(window).width() - $('#container_right').outerWidth())/2,
 		});
 	}
 });
 
 $(document).ready(function(){
+	$(window).resize();
 	$(window).resize();
 });
