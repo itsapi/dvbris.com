@@ -1,9 +1,14 @@
 #container_left {
-	height: 250px;
 	position: absolute;
+	left: 10%;
 	top: 50%;
 	margin-top: -250px;
-	margin-left: 10%;
+}
+#container_right {
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	margin-top: -300px;
 }
 .text {
 	width: 500px;
@@ -45,7 +50,11 @@
 	content: '\003C- '; 
 }
 #sites li a {
-	position:absolute;
+	position: absolute;
 	left: 1em;
 	width: 19em;
+}
+td img {
+	width: 400px;
+	padding: 10px;
 }
