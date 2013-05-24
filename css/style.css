@@ -1,13 +1,6 @@
 body {
 	background: url(../img/stripes2.png);
 }
-#container_left {
-	height: 250px;
-	position: absolute;
-	top: 50%;
-	margin-top: -250px;
-	margin-left: 10%;
-}
 .text {
 	width: 500px;
 	font-family: monospace;
@@ -48,7 +41,10 @@ body {
 	content: '\003C- '; 
 }
 #sites li a {
-	position:absolute;
+	position: absolute;
 	left: 1em;
 	width: 19em;
+}
+td img {
+	padding: 10px;
 }
