@@ -1,14 +1,10 @@
 #container_left {
 	position: absolute;
 	left: 10%;
-	top: 50%;
-	margin-top: -250px;
 }
 #container_right {
 	position: absolute;
 	right: 10%;
-	top: 50%;
-	margin-top: -300px;
 }
 .text {
 	width: 500px;
@@ -55,6 +51,5 @@
 	width: 19em;
 }
 td img {
-	width: 400px;
 	padding: 10px;
 }
