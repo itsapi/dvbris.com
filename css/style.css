@@ -1,3 +1,6 @@
+body {
+	background: url(../img/stripes2.png);
+}
 #container_left {
 	height: 250px;
 	position: absolute;
