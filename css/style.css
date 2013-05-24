@@ -1,4 +1,4 @@
-#container {
+#container_left {
 	height: 250px;
 	position: absolute;
 	top: 50%;
@@ -9,7 +9,7 @@
 	width: 500px;
 	font-family: monospace;
 	font-weight: 400;
-	padding: 20px;
+	padding: 10px;
 }
 .text em {
 	font-weight: 700;
