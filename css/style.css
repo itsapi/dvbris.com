@@ -1,4 +1,37 @@
-h1, h2, p {font-family: 'Roboto', Verdana, Helvetica, sans-serif;}
-h1 {color: blue;}
-h2 {color: red;}
-#droid {float: right;}
+.text {
+	width: 500px;
+	font-family: monospace;
+	font-weight: 400;
+	padding: 20px;
+}
+.text em {
+	font-weight: 700;
+}
+.text a {
+	color: #444;
+}
+.text a:hover {
+	color: #000;
+}
+
+#intro {
+	font-size: 1.5em;
+}
+
+#sites ul {
+	padding-left: 10px;
+}
+#sites li {
+	list-style: none;
+	position: relative;
+}
+#sites li:before {
+	content: '- ';
+}
+#sites li span {
+	position: absolute;
+	left: 19em;
+}
+#sites li span:before {
+	content: '\003C- '; 
+}
