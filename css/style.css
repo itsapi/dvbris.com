@@ -1,3 +1,10 @@
+#container {
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	margin-top: -250px;
+	margin-left: 10%;
+}
 .text {
 	width: 500px;
 	font-family: monospace;
@@ -13,11 +20,13 @@
 .text a:hover {
 	color: #000;
 }
-
+.link {
+	cursor: pointer;
+	border-bottom: 2px #444 dotted;
+}
 #intro {
 	font-size: 1.5em;
 }
-
 #sites ul {
 	padding-left: 10px;
 }
