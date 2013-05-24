@@ -44,3 +44,8 @@
 #sites li span:before {
 	content: '\003C- '; 
 }
+#sites li a {
+	position:absolute;
+	left: 1em;
+	width: 19em;
+}
