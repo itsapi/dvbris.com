@@ -1,9 +1,11 @@
 $.fn.teletype = function(){
-	var $this = this;
+	var $this = this.filter('span:first-child');
+	this.append('<span> &#9608;</span>');
+	console.log($this);
 
-	text = $this.html();
+	text = this.html();
 	$this.html('');
-	$this.show();
+	this.show();
 
 	$.each(text.split(''), function(i, letter){
 		setTimeout(function(){
@@ -12,8 +14,15 @@ $.fn.teletype = function(){
 	});
 	setTimeout(function(){
 		console.log('stepComplete');
-		stepComplete = 1;
-		if (step < 3) doStep();
+		setInterval(function(){
+			$('.bash span:nth-child(2)').toggle();
+		}, 1000);
+		if (step < 3){
+			doStep();
+			$('.bash span:nth-child(2)').remove();
+		} else {
+			stepComplete = 1;
+		}
 	}, 50*text.split('').length);
 };
 
@@ -40,6 +49,7 @@ $(document).keypress(function(e){
 		console.log('pressed enter ' + step);
 		if (stepComplete){
 			stepComplete = 0;
+			$('.bash span:nth-child(2)').remove();
 			if (step < $('body').children('section').length){
 				doStep();
 			}
@@ -48,6 +58,7 @@ $(document).keypress(function(e){
 });
 
 $(document).ready(function(){
+	$('.bash').wrapInner('<span />');
 	$('section').hide();
 	doStep();
 });
