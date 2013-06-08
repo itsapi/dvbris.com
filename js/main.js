@@ -53,8 +53,9 @@ var blink = function() {
 }
 
 $(function() {
-	$('body').prepend('<h2><pre></pre></h2>');
-	$('h2 pre').figlet("Dvbris Web Design");
+	$('body').prepend('<pre id="line1"></pre><pre id="line2"></pre>');
+	$('pre#line1').figlet('Dvbris', 'dotmatrix');
+	$('pre#line2').figlet('Web Design', 'dotmatrix');
 });
 
 var stepComplete = 0;
