@@ -81,7 +81,7 @@ $(document).ready(function(){
 	$('.bash').prepend('pi@raspberrypi:~$ ');
 	$('.bash').wrapInner('<span />');
 	$('section, pre').hide();
-	$('pre').fadeIn('slow');
+	$('pre').fadeIn(1000);
 	setTimeout(function(){
 		div = '#container';
 		doStep();
