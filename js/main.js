@@ -83,7 +83,7 @@ $(document).ready(function(){
 	$('section, pre').hide();
 	$('pre').fadeIn(1000);
 	setTimeout(function(){
-		div = '#container';
+		div = '#start';
 		doStep();
 	}, 1000);
 });
