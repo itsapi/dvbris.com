@@ -18,7 +18,7 @@ $.fn.teletype = function(){
 			doStep();
 		} else {
 			stepComplete = 1;
-			$('#container section.text:nth-child('+step+')').click(function(){
+			$(div + ' section.text:nth-child('+step+')').click(function(){
 				continueSteps();
 			});
 		}
@@ -26,13 +26,13 @@ $.fn.teletype = function(){
 }
 
 function doStep() {
-	var $this = $('#container').children('section.text');
+	var $this = $(div).children('section.text');
 	step++;
 	console.log(step);
 	if ($this.filter(':nth-child('+step+')').hasClass('bash')){
 		$this.filter(':nth-child('+step+')').teletype();
 	} else {
-		$this.filter(':nth-child('+step+')').fadeIn('slow', function(){
+		$this.filter(':nth-child('+step+')').show('slow', function(){
 			if (step < $this.length){
 				doStep();
 			}
@@ -46,7 +46,7 @@ function continueSteps(){
 		stepComplete = 0;
 		$('.bash span:nth-child(2)').remove();
 		cursor.stopTimer();
-		if (step < $('#container').children('section.text').length){
+		if (step < $(div).children('section.text').length){
 			doStep();
 		}
 	}
@@ -68,6 +68,7 @@ var blink = function() {
 var stepComplete = 0;
 var step = 0;
 var cursor = new blink();
+var div;
 
 $(document).keypress(function(e){
 	if (e.which == 13){
@@ -79,8 +80,10 @@ $(document).ready(function(){
 	console.log('ready!');
 	$('.bash').prepend('pi@raspberrypi:~$ ');
 	$('.bash').wrapInner('<span />');
-	$('section').hide();
+	$('section, pre').hide();
+	$('pre').fadeIn('slow');
 	setTimeout(function(){
+		div = '#container';
 		doStep();
 	}, 1000);
 });
