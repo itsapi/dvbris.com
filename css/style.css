@@ -24,30 +24,28 @@ body {
 	border-bottom: 2px #888 dotted;
 }
 #intro {
-	font-size: 1.5em;
+	/*font-size: 1.5em;*/
 }
 #sites ul {
 	padding-left: 10px;
 }
 #sites li {
 	list-style: none;
-	position: relative;
 }
 #sites li:before {
 	content: '- ';
 }
 #sites li span {
-	position: absolute;
 	left: 19em;
 }
 #sites li span:before {
 	content: '\003C- '; 
 }
 #sites li a {
-	position: absolute;
 	left: 1em;
 	width: 19em;
 }
-#intro, #sites {
+.text:not(.bash) {
 	border: 1px #fff solid;
+	margin: 10px auto;
 }

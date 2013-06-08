@@ -1,30 +1,53 @@
-function teletype(el, animDelay, text, callback){
+$.fn.teletype = function(){
+	var $this = this;
+
+	text = $this.html();
+	$this.html('');
+	$this.show();
+
 	$.each(text.split(''), function(i, letter){
 		setTimeout(function(){
-			el.append(letter);
-		}, animDelay * i);
+			$this.html($this.html() + letter);
+		}, 50*i);
 	});
 	setTimeout(function(){
-		callback();
-	}, text.split('').length*animDelay);
+		console.log('stepComplete');
+		stepComplete = 1;
+		if (step < 3) doStep();
+	}, 50*text.split('').length);
 };
 
-$(document).ready(function(){
-	$('#intro, #sites').css('display', 'none');
-	$('body').prepend("<section class=\"text bash\"></section>");
-	teletype($('.bash:first-child'), 100, '$ pi@raspberrypi - ', function() {
-		$('.bash:first-child').append('<br><br>');
-		teletype($('.bash:first-child'), 100, '$ pi@raspberrypi - cat intro.txt', function() {
-			setTimeout(function(){
-				$('#intro').fadeIn('slow', function() {
-					$('#intro').after("<section class=\"text bash\"></section>");
-					teletype($('.bash:nth-child(3)'), 100, '$ pi@raspberrypi - cat sites.txt', function() {
-						setTimeout(function(){
-							$('#sites').fadeIn('slow');
-						}, 200);
-					});
-				});
-			}, 200);
+function doStep() {
+	var $this = $('body').children('section');
+	step++;
+	console.log(step);
+	if ($this.filter(':nth-child('+step+')').hasClass('bash')){
+		$this.filter(':nth-child('+step+')').teletype();
+	} else {
+		$this.filter(':nth-child('+step+')').fadeIn('slow', function(){
+			if (step < $this.length){
+				doStep();
+			}
 		});
-	});
+	}
+}
+
+var stepComplete = 0;
+var step = 0;
+
+$(document).keypress(function(e){
+	if (e.which == 13){
+		console.log('pressed enter ' + step);
+		if (stepComplete){
+			stepComplete = 0;
+			if (step < $('body').children('section').length){
+				doStep();
+			}
+		}
+	}
+});
+
+$(document).ready(function(){
+	$('section').hide();
+	doStep();
 });
