@@ -1,17 +1,7 @@
 body {
 	background: #000;
 	color: #fff;
-}
-#container {
 	padding-top: 20px;
-}
-#line2 {
-	text-align: center;
-	font-size: 0.2em;
-}
-#line1 {
-	text-align: center;
-	font-size: 0.9em;
 }
 .text {
 	margin: 0 auto;

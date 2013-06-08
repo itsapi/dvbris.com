@@ -25,7 +25,7 @@ $.fn.teletype = function(){
 };
 
 function doStep() {
-	var $this = $('#container').children('section');
+	var $this = $('#container').children('section.text');
 	step++;
 	console.log(step);
 	if ($this.filter(':nth-child('+step+')').hasClass('bash')){
@@ -52,11 +52,10 @@ var blink = function() {
 	};
 }
 
-$(function() {
-	$('body').prepend('<pre id="line1"></pre><pre id="line2"></pre>');
-	$('pre#line1').figlet('Dvbris', 'dotmatrix');
-	$('pre#line2').figlet('Web Design', 'dotmatrix');
-});
+// $(function() {
+// 	// $('pre#line1').figlet('Dvbris', 'dotmatrix');
+// 	// $('pre#line2').figlet('Web Design', 'dotmatrix');
+// });
 
 var stepComplete = 0;
 var step = 0;
@@ -69,7 +68,7 @@ $(document).keypress(function(e){
 			stepComplete = 0;
 			$('.bash span:nth-child(2)').remove();
 			cursor.stopTimer();
-			if (step < $('#container').children('section').length){
+			if (step < $('#container').children('section.text').length){
 				doStep();
 			}
 		}
