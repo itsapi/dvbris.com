@@ -1,6 +1,6 @@
 $.fn.teletype = function(){
 	var $this = this.children().filter('span:first-child');
-	this.append('<span> &#9608;</span>');
+	this.append('<span>&#9608;</span>');
 
 	text = $this.html();
 	$this.html('');
@@ -25,7 +25,7 @@ $.fn.teletype = function(){
 };
 
 function doStep() {
-	var $this = $('body').children('section');
+	var $this = $('#container').children('section');
 	step++;
 	console.log(step);
 	if ($this.filter(':nth-child('+step+')').hasClass('bash')){
@@ -52,6 +52,11 @@ var blink = function() {
 	};
 }
 
+$(function() {
+	$('body').prepend('<h2><pre></pre></h2>');
+	$('h2 pre').figlet("Dvbris Web Design");
+});
+
 var stepComplete = 0;
 var step = 0;
 var cursor = new blink();
@@ -63,7 +68,7 @@ $(document).keypress(function(e){
 			stepComplete = 0;
 			$('.bash span:nth-child(2)').remove();
 			cursor.stopTimer();
-			if (step < $('body').children('section').length){
+			if (step < $('#container').children('section').length){
 				doStep();
 			}
 		}
@@ -71,7 +76,10 @@ $(document).keypress(function(e){
 });
 
 $(document).ready(function(){
+	console.log('ready!');
 	$('.bash').wrapInner('<span />');
 	$('section').hide();
-	doStep();
+	setTimeout(function(){
+		doStep();
+	}, 1000);
 });

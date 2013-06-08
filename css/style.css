@@ -3,6 +3,9 @@ body {
 	color: #fff;
 	padding: 20px;
 }
+h2 {
+	text-align: center;
+}
 .text {
 	margin: 0 auto;
 	max-width: 800px;
