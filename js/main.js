@@ -1,9 +1,8 @@
 $.fn.teletype = function(){
-	var $this = this.filter('span:first-child');
+	var $this = this.children().filter('span:first-child');
 	this.append('<span> &#9608;</span>');
-	console.log($this);
 
-	text = this.html();
+	text = $this.html();
 	$this.html('');
 	this.show();
 
@@ -14,12 +13,11 @@ $.fn.teletype = function(){
 	});
 	setTimeout(function(){
 		console.log('stepComplete');
-		setInterval(function(){
-			$('.bash span:nth-child(2)').toggle();
-		}, 1000);
+		cursor.startTimer();
 		if (step < 3){
-			doStep();
 			$('.bash span:nth-child(2)').remove();
+			cursor.stopTimer();
+			doStep();
 		} else {
 			stepComplete = 1;
 		}
@@ -41,8 +39,22 @@ function doStep() {
 	}
 }
 
+var blink = function() {
+	this.startTimer = function(){
+		timerId = setInterval(function(){
+			$('.bash span:nth-child(2)').toggle();
+		},1000);
+		console.log('start timer');
+	};
+	this.stopTimer = function(){
+		clearInterval(timerId);
+		console.log('stop timer');
+	};
+}
+
 var stepComplete = 0;
 var step = 0;
+var cursor = new blink();
 
 $(document).keypress(function(e){
 	if (e.which == 13){
@@ -50,6 +62,7 @@ $(document).keypress(function(e){
 		if (stepComplete){
 			stepComplete = 0;
 			$('.bash span:nth-child(2)').remove();
+			cursor.stopTimer();
 			if (step < $('body').children('section').length){
 				doStep();
 			}
