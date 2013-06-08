@@ -1,7 +1,9 @@
 body {
 	background: #000;
 	color: #fff;
-	padding: 20px;
+}
+#container {
+	padding-top: 20px;
 }
 #line2 {
 	text-align: center;
@@ -9,7 +11,7 @@ body {
 }
 #line1 {
 	text-align: center;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 .text {
 	margin: 0 auto;
