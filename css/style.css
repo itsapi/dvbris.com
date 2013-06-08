@@ -33,9 +33,6 @@ body {
 	cursor: pointer;
 	border-bottom: 2px #888 dotted;
 }
-#intro {
-	/*font-size: 1.5em;*/
-}
 #sites ul {
 	padding-left: 10px;
 }
@@ -56,6 +53,6 @@ body {
 	width: 19em;
 }
 .text:not(.bash) {
-	border: 1px #fff solid;
+	border: 1px #464646 solid;
 	margin: 10px auto;
 }
