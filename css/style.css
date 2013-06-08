@@ -1,8 +1,11 @@
 body {
-	background: url(../img/stripes2.png);
+	background: #000;
+	color: #fff;
+	padding: 20px;
 }
 .text {
-	width: 500px;
+	margin: 0 auto;
+	max-width: 800px;
 	font-family: monospace;
 	font-weight: 400;
 	padding: 10px;
@@ -11,14 +14,14 @@ body {
 	font-weight: 700;
 }
 .text a {
-	color: #444;
+	color: #888;
 }
 .text a:hover {
-	color: #000;
+	color: #fff;
 }
 .link {
 	cursor: pointer;
-	border-bottom: 2px #444 dotted;
+	border-bottom: 2px #888 dotted;
 }
 #intro {
 	font-size: 1.5em;
@@ -44,7 +47,4 @@ body {
 	position: absolute;
 	left: 1em;
 	width: 19em;
-}
-td img {
-	padding: 10px;
 }

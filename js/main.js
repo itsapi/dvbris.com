@@ -1,36 +1,27 @@
-$(window).resize(function(){
-	if ($(window).width() > 1024) {
-		$('#container_left').css({
-			position: 'absolute',
-			top: ($(window).height() - $('#container_left').outerHeight())/2,
-			left: '10%'
-		});
-		$('td img').css({
-			width: ($(window).width()-$('#container_left').width())/4
-		});
-		$('#container_right').css({
-			position: 'absolute',
-			top: ($(window).height() - $('#container_right').outerHeight())/2,
-			right: '5%'
-		});
-	} else {
-		$('#container_left').css({
-			position: 'absolute',
-			top: '10%',
-			left: ($(window).width() - $('#container_left').outerWidth())/2
-		});
-		$('td img').css({
-			width: $(window).width()/4
-		});
-		$('#container_right').css({
-			position: 'absolute',
-			top: $('#container_left').outerHeight()+$(window).width()/5,
-			right: ($(window).width() - $('#container_right').outerWidth())/2,
-		});
-	}
-});
+$.fn.teletype = function(opts){
+	var $this = this,
+		defaults = {
+			animDelay: 50
+		},
+		settings = $.extend(defaults, opts);
+
+	$.each(settings.text.split(''), function(i, letter){
+		setTimeout(function(){
+			$this.html($this.html() + letter);
+		}, settings.animDelay * i);
+	});
+};
 
 $(document).ready(function(){
-	$(window).resize();
-	$(window).resize();
+	$('#intro, #sites').css('display', 'none');
+	$('body').prepend("<section class=\"text\" id=\"start\"></section>");
+	$('#start').teletype({
+		animDelay: 100,
+		text: '$ pi@raspberrypi - '
+	});
+	setTimeout(function(){
+		$('#intro').fadeIn('slow', function() {
+			$('#sites').fadeIn('slow');
+		});
+	}, 2000);
 });
