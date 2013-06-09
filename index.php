@@ -39,8 +39,8 @@
 </pre>
 		<div id="container">
 			<div id="start">
-				<section class="text bash"></section>
-				<section class="text bash">help</section>
+				<section class="text bash advance"></section>
+				<section class="text bash advance">help</section>
 				<section class="text">Press enter to run each command (or click it)</section>
 				<section class="text bash">cat intro.txt</section>
 				<section class="text" id="intro">
@@ -65,31 +65,31 @@
 				</section>
 			</div>
 			<div id="site1">
-				<section class="text bash">ping itsapi.no-ip.org</section>
+				<section class="text bash advance">ping itsapi.no-ip.org</section>
 				<section class="text">
 					Itsapi
 				</section>
 			</div>
 			<div id="site2">
-				<section class="text bash">ping dvbris.no-ip.org/open_board</section>
+				<section class="text bash advance">ping dvbris.no-ip.org/open_board</section>
 				<section class="text">
 					Open board
 				</section>
 			</div>
 			<div id="site3">
-				<section class="text bash">ping dvbris.no-ip.org/news_feed</section>
+				<section class="text bash advance">ping dvbris.no-ip.org/news_feed</section>
 				<section class="text">
 					News feed
 				</section>
 			</div>
 			<div id="site4">
-				<section class="text bash">ping dvbris.no-ip.org/webDesign/MrDorph</section>
+				<section class="text bash advance">ping dvbris.no-ip.org/webDesign/MrDorph</section>
 				<section class="text">
 					MrDorph
 				</section>
 			</div>
 			<div id="site5">
-				<section class="text bash">ping dvbris.no-ip.org/webDesign/coderqi</section>
+				<section class="text bash advance">ping dvbris.no-ip.org/webDesign/coderqi</section>
 				<section class="text">
 					coderqi
 				</section>

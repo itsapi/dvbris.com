@@ -12,7 +12,7 @@ $.fn.teletype = function(){
 	setTimeout(function(){
 		console.log('stepComplete');
 		cursor.startTimer();
-		if (step < 3 && div == '#start'){
+		if ($(div + ' section.text:nth-child('+step+')').hasClass('advance')){
 			$('.bash span:nth-child(2)').remove();
 			cursor.stopTimer();
 			doStep();
