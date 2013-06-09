@@ -1,3 +1,8 @@
+<?
+	if (isset($_GET['admin'])) {
+		echo 'You are admin';
+	} else {
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -5,7 +10,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<title>Document</title>
+		<title>Dvbris Web Design</title>
 
 		<link rel="stylesheet" href="css/style.css">
 
@@ -48,14 +53,14 @@
 					<h3>Sites We've Built...</h3>
 					<h4>...For Ourselves...</h4>
 					<ul>
-						<li><a href="javascript: div='#site1'; step = 0; doStep();"><em>itsapi</em>.no-ip.org</a> <span>A social network, with <em>Pi</em></span></li>
-						<li><a href="javascript: div='#site2'; step = 0; doStep();">dvbris.no-ip.org/<em>open_board</em></a> <span>An <em>Open Board</em> for anyone</span></li>
-						<li><a href="javascript: div='#site3'; step = 0; doStep();">dvbris.no-ip.org/<em>news_feed</em></a> <span>A feed to get your <em>News</em></span></li>
+						<li><a name="1" href="#sites"><em>itsapi</em>.no-ip.org</a> <span>A social network, with <em>Pi</em></span></li>
+						<li><a name="2" href="#sites">dvbris.no-ip.org/<em>open_board</em></a> <span>An <em>Open Board</em> for anyone</span></li>
+						<li><a name="3" href="#sites">dvbris.no-ip.org/<em>news_feed</em></a> <span>A feed to get your <em>News</em></span></li>
 					</ul>
 					<h4>...And For Others</h4>
 					<ul>
-						<li><a href="javascript: div='#site4'; step = 0; doStep();">dvbris.no-ip.org/webDesign/MrDorph</a> <span>A gaming clan community</span></li>
-						<li><a href="javascript: div='#site5'; step = 0; doStep();">dvbris.no-ip.org/webDesign/coderqi</a> <span>A second hand car search engine</span></li>
+						<li><a name="4" href="#sites">dvbris.no-ip.org/webDesign/MrDorph</a> <span>A gaming clan community</span></li>
+						<li><a name="5" href="#sites">dvbris.no-ip.org/webDesign/coderqi</a> <span>A second hand car search engine</span></li>
 					</ul>
 				</section>
 			</div>
@@ -77,6 +82,21 @@
 					News feed
 				</section>
 			</div>
+			<div id="site4">
+				<section class="text bash">ping dvbris.no-ip.org/webDesign/MrDorph</section>
+				<section class="text">
+					MrDorph
+				</section>
+			</div>
+			<div id="site5">
+				<section class="text bash">ping dvbris.no-ip.org/webDesign/coderqi</section>
+				<section class="text">
+					coderqi
+				</section>
+			</div>
 		</div>
 	</body>
 </html>
+<?
+	}
+?>

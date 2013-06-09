@@ -12,13 +12,14 @@ $.fn.teletype = function(){
 	setTimeout(function(){
 		console.log('stepComplete');
 		cursor.startTimer();
-		if (step < 3){
+		if (step < 3 && div == '#start'){
 			$('.bash span:nth-child(2)').remove();
 			cursor.stopTimer();
 			doStep();
 		} else {
 			stepComplete = 1;
 			$(div + ' section.text:nth-child('+step+')').click(function(){
+				console.log('Clicked');
 				continueSteps();
 			});
 		}
@@ -28,12 +29,14 @@ $.fn.teletype = function(){
 function doStep() {
 	var $this = $(div).children('section.text');
 	step++;
+	console.log(div);
 	console.log(step);
 	if ($this.filter(':nth-child('+step+')').hasClass('bash')){
 		$this.filter(':nth-child('+step+')').teletype();
 	} else {
 		$this.filter(':nth-child('+step+')').show('slow', function(){
 			if (step < $this.length){
+				console.log('stepComplete');
 				doStep();
 			}
 		});
@@ -41,7 +44,6 @@ function doStep() {
 }
 
 function continueSteps(){
-	console.log('pressed enter ' + step);
 	if (stepComplete){
 		stepComplete = 0;
 		$('.bash span:nth-child(2)').remove();
@@ -72,6 +74,7 @@ var div;
 
 $(document).keypress(function(e){
 	if (e.which == 13){
+		console.log('pressed enter');
 		continueSteps();
 	}
 });
@@ -82,6 +85,12 @@ $(document).ready(function(){
 	$('.bash').wrapInner('<span />');
 	$('section, pre').hide();
 	$('pre').fadeIn(1000);
+	$('#sites a').click(function(){
+			$('[id^=site]:not(#sites) section').hide();
+			div = '#site' + ($(this).attr('name'));
+			step = 0;
+			doStep();
+	});
 	setTimeout(function(){
 		div = '#start';
 		doStep();
