@@ -4,6 +4,10 @@ body {
 	max-width: 800px;
 	color: #fff;
 }
+h1, pre#logo {
+	font-family: monospace;
+	text-align: center;
+}
 .bash {
 	cursor: pointer;
 }
@@ -49,4 +53,20 @@ body {
 .text:not(.bash) {
 	border: 1px #464646 solid;
 	margin: 10px auto;
+}
+@media screen and (max-width: 580px) {
+	pre#logo {
+		display: none;
+	}
+	h1 {
+		display: block;
+	}
+}
+@media screen and (min-width: 579px) {
+	h1 {
+		display: none;
+	}
+	pre#logo {
+		display: block;
+	}
 }

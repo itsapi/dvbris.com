@@ -1,8 +1,3 @@
-<?
-	if (isset($_GET['admin'])) {
-		echo 'You are admin';
-	} else {
-?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -20,8 +15,15 @@
 		<script src="js/main.js"></script>
 	</head>
 	<body>
-		<h1 hidden>Dvbris Web Design</h1>
-<pre style="text-align: center">
+<?
+	if (isset($_GET['admin'])) {
+?>
+		<nav></nav>
+<?
+	}
+?>
+		<h1>Dvbris Web Design</h1>
+<pre id="logo">
  ,-.      _.--.  .--._     .-,   ,-.     _.--.  .--._      .-, 
 { :_}  ,-'  .'.}{.'.  ',  {_: } { :_}  ,'  .'.}{.'.  '-,  {_: }
  '.__.'     '~'  '~'    '.__.'   '.__.'    '~'  '~'     '.__.' 
@@ -97,6 +99,3 @@
 		</div>
 	</body>
 </html>
-<?
-	}
-?>

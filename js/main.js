@@ -27,6 +27,7 @@ $.fn.teletype = function(){
 }
 
 function doStep() {
+	$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 	var $this = $(div).children('section.text');
 	step++;
 	console.log(div);
@@ -35,8 +36,8 @@ function doStep() {
 		$this.filter(':nth-child('+step+')').teletype();
 	} else {
 		$this.filter(':nth-child('+step+')').show('slow', function(){
+			console.log('stepComplete');
 			if (step < $this.length){
-				console.log('stepComplete');
 				doStep();
 			}
 		});
@@ -83,8 +84,9 @@ $(document).ready(function(){
 	console.log('ready!');
 	$('.bash').prepend('pi@raspberrypi:~$ ');
 	$('.bash').wrapInner('<span />');
-	$('section, pre').hide();
-	$('pre').fadeIn(1000);
+	$('section, pre#logo').hide();
+	$('pre#logo').fadeIn(1000);
+	$('pre#logo').removeAttr('style');
 	$('#sites a').click(function(){
 			$('[id^=site]:not(#sites) section').hide();
 			div = '#site' + ($(this).attr('name'));
