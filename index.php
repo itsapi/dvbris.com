@@ -21,7 +21,7 @@
 		<section>
 			<nav>
 <?
-		if (isset($_COOKIE["pi_links"]) || md5($_POST['password']) == 'ef9895022601b44bb112c85aea07f009'){
+		if (isset($_COOKIE["pi_links"]) || (isset($_POST['password']) || md5($_POST['password']) == 'ef9895022601b44bb112c85aea07f009')){
 			setcookie('pi_links', 1);
 ?>
 				<ul>
