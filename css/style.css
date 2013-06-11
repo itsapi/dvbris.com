@@ -1,11 +1,55 @@
 body {
 	background: #000;
+	font-family: monospace;
 	margin: 0 auto;
 	max-width: 800px;
 	color: #fff;
 }
+nav {
+	position: fixed;
+	width: 180px;
+	left: -160px;
+	top: 100px;
+
+	background: rgba(255,255,255,0.5);
+	padding: 10px 5px;
+
+	border-radius: 0 15px 15px 0;
+	-moz-border-radius: 0 15px 15px 0;
+	-webkit-border-radius: 0 15px 15px 0;
+
+	-webkit-box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 1);
+
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+nav:hover {
+	left: 0;
+}
+nav form {
+	display: block;
+	margin: 5px;
+}
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+nav li a {
+	text-decoration: none;
+	padding: 12px;
+	display: block;
+	color: #fff;
+	font-size: 0.95em;
+	font-weight: normal;
+}
+nav li a:hover {
+	text-decoration: underline;
+}
 h1, pre#logo {
-	font-family: monospace;
 	text-align: center;
 }
 .bash {
@@ -14,7 +58,6 @@ h1, pre#logo {
 .text {
 	width: 100%;
 	margin: 0;
-	font-family: monospace;
 	font-weight: 400;
 	padding: 10px;
 }

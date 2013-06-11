@@ -84,11 +84,11 @@ $(document).ready(function(){
 	console.log('ready!');
 	$('.bash').prepend('pi@raspberrypi:~$ ');
 	$('.bash').wrapInner('<span />');
-	$('section, pre#logo').hide();
+	$('section.text, pre#logo').hide();
 	$('pre#logo').fadeIn(1000);
 	$('pre#logo').removeAttr('style');
 	$('#sites a').click(function(){
-			$('[id^=site]:not(#sites) section').hide();
+			$('[id^=site]:not(#sites) section.text').hide();
 			div = '#site' + ($(this).attr('name'));
 			step = 0;
 			doStep();

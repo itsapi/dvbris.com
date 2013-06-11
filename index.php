@@ -16,9 +16,32 @@
 	</head>
 	<body>
 <?
-	if (isset($_GET['admin'])) {
+	if (isset($_GET['admin']) || isset($_COOKIE["pi_links"])){
 ?>
-		<nav></nav>
+		<section>
+			<nav>
+<?
+		if (md5($_POST['password']) == 'ef9895022601b44bb112c85aea07f009' || isset($_COOKIE["pi_links"])){
+			setcookie('pi_links', 1);
+?>
+				<ul>
+					<li><a href="/phpsysinfo">PHP system info</a></li>
+					<li><a href="/webmin/">Webmin</a></li>
+					<li><a href="/webalizer">Web usage stats</a></li>
+					<li><a href="/shell">Shell in a box</a></li>
+				</ul>
+<?
+		} else {
+?>
+			<form method="post">
+				<label>Password<input type="password" name="password"></label>
+				<input type="submit" value="Submit">
+			</form>
+<?
+		}
+?>
+			</nav>
+		</section>
 <?
 	}
 ?>
