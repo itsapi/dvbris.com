@@ -88,10 +88,16 @@ $(document).ready(function(){
 	$('pre#logo').fadeIn(1000);
 	$('pre#logo').removeAttr('style');
 	$('#sites a').click(function(){
+		if (isNaN($(this).attr('name'))) {
 			$('[id^=site]:not(#sites) section.text').hide();
+			div = '#section2';
+			step = 0;
+			doStep();
+		} else {
 			div = '#site' + ($(this).attr('name'));
 			step = 0;
 			doStep();
+		}
 	});
 	setTimeout(function(){
 		div = '#start';

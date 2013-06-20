@@ -26,17 +26,20 @@
 				$admin = 1;
 			}
 		}
-		if (isset($_COOKIE["pi_links"])){
+		if (isset($_POST['logout'])){
+			setcookie('pi_links', '', time()-60000);
+		}
+		if (isset($_COOKIE['pi_links'])){
 			$admin = 1;
 		}
 		if (isset($admin)){
-			setcookie('pi_links', 1);
+			setcookie('pi_links', 1, time()+3600*24*30);
 ?>
 				<ul>
-					<li><a href="/phpsysinfo">PHP system info</a></li>
-					<li><a href="/webmin/">Webmin</a></li>
-					<li><a href="/webalizer">Web usage stats</a></li>
-					<li><a href="/shell">Shell in a box</a></li>
+					<li><a href="/phpsysinfo" target="_blank">PHP system info</a></li>
+					<li><a href="/webmin/" target="_blank" target="_blank">Webmin</a></li>
+					<li><a href="/webalizer" target="_blank">Web usage stats</a></li>
+					<li><a href="/shell" target="_blank">Shell in a box</a></li>
 				</ul>
 <?
 		} else {
@@ -44,6 +47,7 @@
 			<form method="post">
 				<label>Password<input type="password" name="password"></label>
 				<input type="submit" value="Submit">
+				<input type="submit" name="logout" value="Logout">
 			</form>
 <?
 		}
@@ -95,37 +99,58 @@
 						<li><a name="4" href="javascript:void(0)">dvbris.no-ip.org/webDesign/MrDorph</a> <span>A gaming clan community</span></li>
 						<li><a name="5" href="javascript:void(0)">dvbris.no-ip.org/webDesign/coderqi</a> <span>A second hand car search engine</span></li>
 					</ul>
+					<h4><a name="continue" href="javascript:void(0)">&raquo; Continue &raquo;</a></h4>
 				</section>
 			</div>
 			<div id="site1">
 				<section class="text bash advance">ping itsapi.no-ip.org</section>
 				<section class="text">
-					Itsapi
+					<h3>Itsapi</h3>
+					<p></p>
 				</section>
 			</div>
 			<div id="site2">
 				<section class="text bash advance">ping dvbris.no-ip.org/open_board</section>
 				<section class="text">
-					Open board
+					<h3>Open board</h3>
+					<p></p>
 				</section>
 			</div>
 			<div id="site3">
 				<section class="text bash advance">ping dvbris.no-ip.org/news_feed</section>
 				<section class="text">
-					News feed
+					<h3>News feed</h3>
+					<p></p>
 				</section>
 			</div>
 			<div id="site4">
 				<section class="text bash advance">ping dvbris.no-ip.org/webDesign/MrDorph</section>
 				<section class="text">
-					MrDorph
+					<h3>MrDorph</h3>
+					<p></p>
 				</section>
 			</div>
 			<div id="site5">
 				<section class="text bash advance">ping dvbris.no-ip.org/webDesign/coderqi</section>
 				<section class="text">
-					coderqi
+					<h3>coderqi</h3>
+					<p></p>
 				</section>
+			</div>
+			<div id="section2">
+				<section class="text bash advance">ping github.com/itsapi</section>
+				<section class="text">
+					<p>PING github.com (204.232.175.90) 56(84) bytes of data.</p>
+					<p>64 bytes from github.com (204.232.175.90): icmp_req=1 ttl=48 time=107 ms</p>
+					<p>64 bytes from github.com (204.232.175.90): icmp_req=2 ttl=48 time=108 ms</p>
+					<p>64 bytes from github.com (204.232.175.90): icmp_req=3 ttl=48 time=108 ms</p>
+				</section>
+				<section class="text">
+					<h3>Open Source</h3>
+					<p>We believe in making our content freely available for everone to use. This is why all our sites are on GitHub at <a href="http://github.com/itsapi" target="_blank">github.com/itsapi</a></p>
+				</section>
+				<section class="text bash"></section>
+				<section class="text"></section>
 			</div>
 		</div>
 	</body>
