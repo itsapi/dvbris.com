@@ -17,6 +17,7 @@
 		<script src="js/snowstorm-min.js"></script>
 		<script>
 			snowStorm.flakesMax = 256;
+			snowStorm.followMouse = false;
 		</script>
 	</head>
 	<body>
