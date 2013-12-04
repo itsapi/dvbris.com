@@ -13,7 +13,7 @@
 		<script src="js/figlet.js"></script>
 		<script src="js/jquery.figlet.js"></script>
 		<script src="js/main.js"></script>
-		<script src="js/snowstorm.js"></script>
+		<script src="js/snowstorm-min.js"></script>
 	</head>
 	<body>
 <?
