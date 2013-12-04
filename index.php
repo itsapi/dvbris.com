@@ -13,7 +13,12 @@
 		<script src="js/figlet.js"></script>
 		<script src="js/jquery.figlet.js"></script>
 		<script src="js/main.js"></script>
+		
 		<script src="js/snowstorm-min.js"></script>
+		<script>
+			snowStorm.flakesMaxActive = 96;
+			snowStorm.useTwinkleEffect = true;
+		</script>
 	</head>
 	<body>
 <?
