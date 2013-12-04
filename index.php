@@ -23,7 +23,7 @@
 			snowStorm.freezeOnBlur = false;
 			snowStorm.snowCharacter = '*';
 			snowStorm.vMaxX = 16;
-			snowStorm.vMaxY = 16;
+			snowStorm.vMaxY = 8;
 		</script>
 	</head>
 	<body>
