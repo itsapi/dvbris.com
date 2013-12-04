@@ -17,13 +17,6 @@
 		<script src="js/snowstorm-min.js"></script>
 		<script>
 			snowStorm.flakesMax = 256;
-			snowStorm.flakesMaxActive = 128;
-			snowStorm.useTwinkleEffect = true;
-			snowStorm.followMouse = false;
-			snowStorm.freezeOnBlur = false;
-			snowStorm.snowCharacter = '*';
-			snowStorm.vMaxX = 16;
-			snowStorm.vMaxY = 8;
 		</script>
 	</head>
 	<body>
