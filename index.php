@@ -13,6 +13,7 @@
 		<script src="js/figlet.js"></script>
 		<script src="js/jquery.figlet.js"></script>
 		<script src="js/main.js"></script>
+		<script scr="js/snowfall.js"></script>
 	</head>
 	<body>
 <?
