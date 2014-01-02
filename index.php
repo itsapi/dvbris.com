@@ -14,11 +14,11 @@
 		<script src="js/jquery.figlet.js"></script>
 		<script src="js/main.js"></script>
 		
-		<script src="js/snowstorm-min.js"></script>
+		<!--<script src="js/snowstorm-min.js"></script>
 		<script>
 			snowStorm.flakesMax = 256;
 			snowStorm.followMouse = false;
-		</script>
+		</script>-->
 	</head>
 	<body>
 <?
