@@ -6,6 +6,11 @@ html, body {
 html {
   background-color: #5dcfc3;
 }
+@media all and (max-width: 300px) {
+  html, body {
+    overflow-x: scroll;
+  }
+}
 body {
   background-color: white;
   font-family: 'Droid Sans', sans-serif;
