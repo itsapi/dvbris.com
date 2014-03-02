@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Gruppo);
-
 html, body {
   overflow-x: hidden;
 }
@@ -49,7 +47,6 @@ article {
   display: table-cell;
   height: 100%;
   width: 30%;
-  margin: 0;
   position: relative;
   border-left: 3px solid rgba(0, 0, 0, .3);
 }
@@ -105,59 +102,4 @@ footer {
   margin: 0;
   padding: 30px;
   text-align: center;
-}
-
-@media all and (max-width: 900px) {
-  h1 {
-    margin-left: 130px;
-  }
-  section {
-    display: block;
-    margin: 0;
-  }
-  article {
-    position: relative;
-    display: block;
-    border: none;
-    border-top: 3px solid rgba(0, 0, 0, .3);
-    clear: left;
-    width: 100%;
-  }
-  .site-img-wrapper {
-    float: left;
-    width: 236px;
-    margin-right: 10px;
-    display: inline-block;
-  }
-  .site-img-wrapper img {
-    width: 200px;
-    height: 120px;
-  }
-  .site-text-wrapper {
-    padding: 10px;
-    min-height: 141px;
-  }
-  footer {
-    border-top: 3px solid rgba(0, 0, 0, .3);
-  }
-}
-@media all and (max-width: 650px) {
-  h1 {
-    padding-top: 50px;
-    margin-left: 0;
-  }
-  header {
-    text-align: center;
-  }
-  .site-img-wrapper {
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .site-img-wrapper img {
-    width: 60%;
-    height: auto;
-  }
 }
