@@ -36,7 +36,6 @@ h2 {
   font-size: 3em;
   margin-top: 0;
 }
-
 section {
   display: table;
   margin: 50px;
@@ -69,9 +68,10 @@ article a {
   border-radius: 3px;
   width: 60%;
   min-width: 200px;
+  max-width: 400px;
 }
 .site-text-wrapper {
-  padding-left: 10px;
+  padding: 0 10px;
   min-height: 161px;
 }
 article a:hover {
@@ -104,24 +104,23 @@ footer {
 
 @media all and (max-width: 900px) {
   h1 {
-    margin-left: 100px;
+    margin-left: 120px;
   }
   section {
     display: block;
     margin: 0;
   }
   article {
+    position: relative;
+    display: block;
     border: none;
     border-top: 3px solid rgba(0, 0, 0, .3);
-    display: block;
     clear: left;
     width: 100%;
-    position: relative;
   }
   .site-img-wrapper {
     float: left;
     width: 236px;
-    padding: 15px;
     margin-right: 10px;
     display: inline-block;
   }
@@ -146,6 +145,7 @@ footer {
     text-align: center;
   }
   .site-img-wrapper {
+    margin-bottom: 10px;
     width: 100%;
     text-align: center;
     -moz-box-sizing: border-box;
@@ -153,7 +153,6 @@ footer {
   }
   .site-img-wrapper img {
     width: 60%;
-    min-width: 200px;
     height: auto;
   }
 }
