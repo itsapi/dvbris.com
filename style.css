@@ -118,8 +118,7 @@ footer {
   }
 
   footer {
-    margin-top: 27px;
-    border-top: 3px dashed black;
+    border-top: 3px solid rgba(0, 0, 0, .3);
   }
 }
 @media all and (max-width: 650px) {
