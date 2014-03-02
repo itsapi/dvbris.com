@@ -38,19 +38,19 @@ h2 {
   margin-top: 0;
 }
 
-artical {
+article {
   display: block;
   background-color: rgba(207, 226, 243, 0.85);
   margin: 30px;
   height: 156px;
 }
-artical img {
+article img {
   display: inline-block;
   border: 3px solid black;
   border-radius: 3px;
   margin: 15px;
 }
-artical a {
+article a {
   color: black;
   font-size: 1.3em;
   margin: 0;
@@ -62,25 +62,25 @@ artical a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-artical a:hover {
+article a:hover {
   color: black;
 }
-artical:nth-child(3n+1) a {
+article:nth-child(3n+1) a {
   background-color: #ff8900;
 }
-artical:nth-child(3n+1):hover a {
+article:nth-child(3n+1):hover a {
   background-color: #ff9910;
 }
-artical:nth-child(3n+2) a {
+article:nth-child(3n+2) a {
   background-color: #a8f000;
 }
-artical:nth-child(3n+2):hover a {
+article:nth-child(3n+2):hover a {
   background-color: #b8ff10;
 }
-artical:nth-child(3n+3) a {
+article:nth-child(3n+3) a {
   background-color: #40a5db;
 }
-artical:nth-child(3n+3):hover a {
+article:nth-child(3n+3):hover a {
   background-color: #50b5eb;
 }
 
