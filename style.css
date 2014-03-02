@@ -1,11 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Gruppo);
 @import url(http://fonts.googleapis.com/css?family=Codystar|Carrois+Gothic|Ruda|Carrois+Gothic+SC);
 
+html, body {
+  overflow-x: hidden;
+}
+
 html {
-  background-color: white;
   background-color: #5dcfc3;
-  padding: 0;
-  height: 100%;
 }
 
 body {
