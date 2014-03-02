@@ -23,7 +23,7 @@
   background-color: #dc5135;
 }
 
-@media all and (min-width: 451px) {
+@media all and (min-width: 651px) {
   .ribbon-wrapper {
     /* Total width and height, should be the same. */
     width: 150px;
@@ -48,7 +48,7 @@
   }
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 650px) {
   .ribbon-wrapper {
     width: 100%;
   }
