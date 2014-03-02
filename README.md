@@ -1,4 +1,4 @@
-portfolio
+Portfolio
 =========
 
-Portfolio of our websites
+A colourful portfolio of all our websites.
