@@ -44,7 +44,6 @@ article {
   display: table-cell;
   height: 100%;
   width: 30%;
-  margin: 0;
   position: relative;
   border-left: 3px solid rgba(0, 0, 0, .3);
 }
