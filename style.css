@@ -39,6 +39,10 @@ artical img, artical div {
 artical img {
   border: 3px solid black;
   border-radius: 3px;
+  margin: 25px;
+}
+artical div {
+  margin: 0;
 }
 artical:nth-child(3n+1) div {
   background-color: #ff9900;
