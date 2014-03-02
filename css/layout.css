@@ -23,6 +23,7 @@ a {
 a:hover {
   color: rgb(90, 130, 200);
 }
+
 header {
   text-align: right;
   margin: 0 30px;
@@ -39,9 +40,13 @@ h2 {
   font-size: 3em;
   margin-top: 0;
 }
+
 section {
-  display: table;
   margin: 50px;
+  position: relative;
+}
+#sites {
+  display: table;
 }
 article {
   display: table-cell;
@@ -97,6 +102,33 @@ article:nth-child(3n+3) {
 article:nth-child(3n+3):hover {
   background-color: #50b5eb;
 }
+#prev, #next {
+  position: absolute;
+  top: 25%;
+  z-index: 100;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 7px -2px black;
+}
+#prev {
+  left: -0.5em;
+}
+#next {
+  right: -0.5em;
+}
+#prev:hover, #next:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+
 footer {
   background-color: #5dcfc3;
   margin: 0;
