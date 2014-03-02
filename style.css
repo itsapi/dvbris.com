@@ -36,10 +36,18 @@ h2 {
   font-size: 3em;
   margin-top: 0;
 }
+
+section {
+  display: table;
+  margin: 50px;
+}
 article {
-  display: block;
+  display: table-cell;
+  height: 100%;
+  width: 30%;
+  margin: 0;
   position: relative;
-  clear: left;
+  border-left: 3px solid rgba(0, 0, 0, .3);
 }
 article a {
   font-size: 1.3em;
@@ -49,24 +57,22 @@ article a {
   padding: 0;
 }
 .site-img-wrapper {
-  float: left;
-  width: 206px;
+  width: 100%;
+  text-align: center;
   padding: 15px;
-  display: inline-block;
   background-color: rgba(217, 236, 253, 0.5);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .site-img-wrapper img {
   border: 3px solid black;
   border-radius: 3px;
-  width: 200px;
-  height: 120px;
+  width: 60%;
+  min-width: 200px;
 }
 .site-text-wrapper {
-  padding: 1px 10px 10px 0;
+  padding-left: 10px;
   min-height: 161px;
-
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 article a:hover {
   color: black;
@@ -96,36 +102,36 @@ footer {
   text-align: center;
 }
 
-@media all and (min-width: 901px) {
-  section {
-    display: table;
-    margin: 50px;
-  }
-  article {
-    display: table-cell;
-    height: 100%;
-    width: 30%;
-  }
-  .site-img-wrapper {
-    float: right;
-  }
-  .site-text-wrapper {
-    padding-left: 10px;
-  }
-}
 @media all and (max-width: 900px) {
   h1 {
     margin-left: 100px;
   }
-  article {
+  section {
+    display: block;
     margin: 0;
+  }
+  article {
+    border: none;
     border-top: 3px solid rgba(0, 0, 0, .3);
+    display: block;
+    clear: left;
+    width: 100%;
+    position: relative;
   }
   .site-img-wrapper {
+    float: left;
+    width: 236px;
+    padding: 15px;
     margin-right: 10px;
+    display: inline-block;
+  }
+  .site-img-wrapper img {
+    width: 200px;
+    height: 120px;
   }
   .site-text-wrapper {
     padding: 10px;
+    min-height: 141px;
   }
   footer {
     border-top: 3px solid rgba(0, 0, 0, .3);
