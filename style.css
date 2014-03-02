@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Gruppo);
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+header {
+  text-align: right;
+}
+h1, h2 {
+  font-weight: normal;
+}
+h1 {
+  font-family: 'Gruppo', cursive;
+  font-size: 5em;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 3em;
+  margin-top: 0;
+}
+
+artical {
+  display: block;
+  background-color: rgba(207, 226, 243, 0.85);
+  margin: 30px;
+}
+artical img, artical div {
+  display: inline-block;
+}
+artical img {
+  border: 3px solid black;
+  border-radius: 3px;
+}
+artical:nth-child(3n+1) div {
+  background-color: #ff9900;
+}
+artical:nth-child(3n+2) div {
+  background-color: #a8f000;
+}
+artical:nth-child(3n+3) div {
+  background-color: #40a5db;
+}
+
+footer {
+  background-color: #5dcfc3;
+}
