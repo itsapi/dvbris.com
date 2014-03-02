@@ -109,39 +109,40 @@ footer {
 @media all and (max-width: 900px) {
   article {
     margin: 0;
+    border-top: 3px solid rgba(0, 0, 0, .3);
   }
   article .site-text-wrapper {
     padding: 10px;
   }
 
   footer {
-    margin-top: 3px;
+    margin-top: 27px;
     border-top: 3px dashed black;
   }
 }
-@media all and (min-width: 550px) {
+@media all and (min-width: 650px) {
   h1 {
     padding-left: 30px;
   }
 }
-@media all and (max-width: 550px) {
+@media all and (max-width: 700px) {
   h1 {
     padding-top: 50px;
   }
 }
-@media all and (max-width: 450px) {
+@media all and (max-width: 650px) and (min-width: 100px) {
   header {
     text-align: center;
-  }
-}
-@media all and (max-width: 400px) and (min-width: 100px) {
-  article {
-    border-top: 3px solid rgba(0, 0, 0, .3);
   }
   article .site-img-wrapper {
     width: 100%;
     text-align: center;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+  article .site-img-wrapper img {
+    width: 60%;
+    min-width: 200px;
+    height: auto;
   }
 }
