@@ -27,26 +27,38 @@
 
     <section>
       <artical>
-        <img src="http://placehold.it/200x120" alt="Screenshot of Site">
         <a href="#">
-          <h3>Awesome Site</h3>
-          <p>This is our best website, it’s really good!</p>
+          <div class="site-img-wrapper">
+            <img src="http://placehold.it/200x120" alt="Screenshot of Site">
+          </div>
+          <div class="site-text-wrapper">
+            <h3>Awesome Site</h3>
+            <p>This is our best website, it’s really good!</p>
+          </div>
         </a>
       </artical>
 
       <artical>
-        <img src="http://placehold.it/200x120" alt="Screenshot of Site">
         <a href="#">
-          <h3>Node Thingy</h3>
-          <p>This one is even better! It’s built using node.js!</p>
+          <div class="site-img-wrapper">
+            <img src="http://placehold.it/200x120" alt="Screenshot of Site">
+          </div>
+          <div class="site-text-wrapper">
+            <h3>Node Thingy</h3>
+            <p>This one is even better! It’s built using node.js!</p>
+          </div>
         </a>
       </artical>
 
       <artical>
-        <img src="http://placehold.it/200x120" alt="Screenshot of Site">
         <a href="#">
-          <h3>Buggy Network</h3>
-          <p>Woah! A Raspberry Pi social network!! With bonus MySQL injection!</p>
+          <div class="site-img-wrapper">
+            <img src="http://placehold.it/200x120" alt="Screenshot of Site">
+          </div>
+          <div class="site-text-wrapper">
+            <h3>Buggy Network</h3>
+            <p>Woah! A Raspberry Pi social network!! With bonus MySQL injection! Woah! A Raspberry Pi social network!! With bonus MySQL injection! Woah! A Raspberry Pi social network!! With bonus MySQL injection!</p>
+          </div>
         </a>
       </artical>
     </section>
@@ -57,6 +69,18 @@
         <a href="http://olls.github.io" rel="author">Oliver Faircliff</a> and
         <a href="http://grit96.co.uk/" rel="author">Geraint White</a></address>
     </footer>
+
+  <script>
+
+  var title = document.getElementByTagName('h1');
+  var fonts = ['Codystar', 'Carrois Gothic', 'Ruda', 'Carrois Gothic SC'];
+  title.font = 0;
+
+  title.onclick = function () {
+    this.style.fontFamily = fonts[this.font++];
+  }
+
+  </script>
 
   </body>
 </html>
