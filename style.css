@@ -1,7 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Gruppo);
 
+html {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0;
+}
+
 body {
+  background-color: white;
   font-family: 'Droid Sans', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
 }
 
 a {
@@ -14,6 +23,7 @@ a:hover {
 
 header {
   text-align: right;
+  margin: 0 30px;
 }
 h1, h2 {
   font-weight: normal;
@@ -21,7 +31,7 @@ h1, h2 {
 h1 {
   font-family: 'Gruppo', cursive;
   font-size: 5em;
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 h2 {
   font-size: 3em;
@@ -32,29 +42,50 @@ artical {
   display: block;
   background-color: rgba(207, 226, 243, 0.85);
   margin: 30px;
-}
-artical img, artical div {
-  display: inline-block;
+  height: 156px;
 }
 artical img {
+  display: inline-block;
   border: 3px solid black;
   border-radius: 3px;
-  margin: 25px;
+  margin: 15px;
 }
-artical div {
+artical a {
+  color: black;
+  font-size: 1.3em;
   margin: 0;
+  padding: 0 10px 10px 10px;
+  float: right;
+  height: inherit;
+  width: calc(100% - 240px);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-artical:nth-child(3n+1) div {
-  background-color: #ff9900;
+artical a:hover {
+  color: black;
 }
-artical:nth-child(3n+2) div {
+artical:nth-child(3n+1) a {
+  background-color: #ff8900;
+}
+artical:nth-child(3n+1):hover a {
+  background-color: #ff9910;
+}
+artical:nth-child(3n+2) a {
   background-color: #a8f000;
 }
-artical:nth-child(3n+3) div {
+artical:nth-child(3n+2):hover a {
+  background-color: #b8ff10;
+}
+artical:nth-child(3n+3) a {
   background-color: #40a5db;
+}
+artical:nth-child(3n+3):hover a {
+  background-color: #50b5eb;
 }
 
 footer {
   background-color: #5dcfc3;
   margin: 0;
+  padding: 50px 30px;
 }

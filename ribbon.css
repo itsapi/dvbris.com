@@ -24,12 +24,17 @@
   font: bold 19px Sans-Serif;
   padding: 16px 0;
   /* Next two trial and error: */
-  right:  -47px;
-  top: 37px;
+  right:  -30px;
+  top: 30px;
   /* Double .ribbon-wrapper width/height. */
-  width: 300px;
+  width: 250px;
 
   float: right;
   background-color: #cc4125;
   color: white;
+  text-decoration: underline;
+}
+.ribbon:hover {
+  color: white;
+  background-color: #dc5135;
 }
