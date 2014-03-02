@@ -42,7 +42,7 @@ h2 {
   margin-top: 0;
 }
 
-artical {
+article {
   display: block;
   margin: 50px;
   position: relative;
@@ -53,8 +53,9 @@ artical a {
   color: black;
   display: block;
   margin: 0;
+  padding: 0;
 }
-artical .site-img-wrapper {
+article .site-img-wrapper {
   float: left;
   width: 206px;
   padding: 15px;
@@ -66,31 +67,32 @@ artical .site-img-wrapper img {
   border: 3px solid black;
   border-radius: 3px;
 }
-artical .site-text-wrapper {
+article .site-text-wrapper {
   padding: 1px 10px 10px 0;
-  min-height: 160px;
+  min-height: 154px;
+
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-artical a:hover {
+article a:hover {
   color: black;
 }
-artical:nth-child(3n+1) {
+article:nth-child(3n+1) {
   background-color: #ff8900;
 }
-artical:nth-child(3n+1):hover {
+article:nth-child(3n+1):hover {
   background-color: #ff9910;
 }
-artical:nth-child(3n+2) {
+article:nth-child(3n+2) {
   background-color: #a8f000;
 }
-artical:nth-child(3n+2):hover {
+article:nth-child(3n+2):hover {
   background-color: #b8ff10;
 }
-artical:nth-child(3n+3) {
+article:nth-child(3n+3) {
   background-color: #40a5db;
 }
-artical:nth-child(3n+3):hover {
+article:nth-child(3n+3):hover {
   background-color: #50b5eb;
 }
 

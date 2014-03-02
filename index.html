@@ -19,14 +19,14 @@
 
     <header>
       <h1>Dvbris Web Design</h1>
-      <h2><a href="http://github.com/olls">Olls</a>/<a href="http://github.com/grit96">Grit</a></h2>
+      <h2><a href="http://github.com/olls" target="_blank">Olls</a>/<a href="http://github.com/grit96" target="_blank">Grit</a></h2>
       <div class="ribbon-wrapper">
         <a href="http://github.com/itsapi" class="ribbon" target="_blank">Github!</a>
       </h4>
     </header>
 
     <section>
-      <artical>
+      <article>
         <a href="#">
           <div class="site-img-wrapper">
             <img src="http://placehold.it/200x120" alt="Screenshot of Site">
@@ -36,9 +36,9 @@
             <p>This is our best website, it’s really good!</p>
           </div>
         </a>
-      </artical>
+      </article>
 
-      <artical>
+      <article>
         <a href="#">
           <div class="site-img-wrapper">
             <img src="http://placehold.it/200x120" alt="Screenshot of Site">
@@ -48,9 +48,9 @@
             <p>This one is even better! It’s built using node.js!</p>
           </div>
         </a>
-      </artical>
+      </article>
 
-      <artical>
+      <article>
         <a href="#">
           <div class="site-img-wrapper">
             <img src="http://placehold.it/200x120" alt="Screenshot of Site">
@@ -60,26 +60,25 @@
             <p>Woah! A Raspberry Pi social network!! With bonus MySQL injection! Woah! A Raspberry Pi social network!! With bonus MySQL injection! Woah! A Raspberry Pi social network!! With bonus MySQL injection!</p>
           </div>
         </a>
-      </artical>
+      </article>
     </section>
 
     <footer>
       <p>Copyright &copy; Dvbris Web Design</p>
       <address>
-        <a href="http://olls.github.io" rel="author">Oliver Faircliff</a> and
-        <a href="http://grit96.co.uk/" rel="author">Geraint White</a></address>
+        <a href="http://olls.github.io" rel="author" target="_blank">Oliver Faircliff</a> and
+        <a href="http://grit96.co.uk/" rel="author" target="_blank">Geraint White</a></address>
     </footer>
 
   <script>
+    var title = document.getElementsByTagName('h1')[0];
+    var fonts = ['Gruppo', 'Droid Sans', 'Codystar', 'Carrois Gothic', 'Ruda', 'Carrois Gothic SC'];
+    title.font_n = 0;
 
-  var title = document.getElementByTagName('h1');
-  var fonts = ['Codystar', 'Carrois Gothic', 'Ruda', 'Carrois Gothic SC'];
-  title.font = 0;
-
-  title.onclick = function () {
-    this.style.fontFamily = fonts[this.font++];
-  }
-
+    title.onclick = function () {
+      this.font_n = (this.font_n != fonts.length -1) ? this.font_n + 1 : 0;
+      this.style.fontFamily = fonts[this.font_n];
+    }
   </script>
 
   </body>
