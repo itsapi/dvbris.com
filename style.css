@@ -4,6 +4,14 @@ body {
   font-family: 'Droid Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(10, 50, 120);
+}
+a:hover {
+  color: rgb(90, 130, 200);
+}
+
 header {
   text-align: right;
 }
@@ -44,4 +52,5 @@ artical:nth-child(3n+3) div {
 
 footer {
   background-color: #5dcfc3;
+  margin: 0;
 }
