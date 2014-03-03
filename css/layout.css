@@ -41,19 +41,23 @@ h2 {
   margin-top: 0;
 }
 
-section {
+.sites {
   margin: 50px;
   position: relative;
 }
-#sites {
-  display: table;
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 article {
-  display: table-cell;
-  height: 100%;
-  width: 30%;
+  flex-basis: 33%;
+  min-width: 236px;
   position: relative;
   border-left: 3px solid rgba(0, 0, 0, .3);
+}
+article.hidden {
+  display: none
 }
 article a {
   font-size: 1.3em;
@@ -103,10 +107,10 @@ article:nth-child(3n+3):hover {
   background-color: #50b5eb;
 }
 #prev, #next {
+  display: none;
   position: absolute;
   top: 25%;
   z-index: 100;
-  display: block;
   width: 50px;
   height: 50px;
   line-height: 50px;
