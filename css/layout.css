@@ -85,6 +85,15 @@ article a {
   padding: 0 10px;
   min-height: 161px;
 }
+h3 {
+  margin-bottom: 0;
+}
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-style: italic;
+}
 article a:hover {
   color: black;
 }
