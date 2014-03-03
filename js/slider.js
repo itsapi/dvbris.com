@@ -51,3 +51,11 @@ addEvent(next, 'click', function () {
 addEvent(window, 'resize', function () {
   update();
 });
+addEvent(document, 'keydown', function (e) {
+  if (e.keyCode === 37) {
+    prev.click();
+  } else if (e.keyCode === 39) {
+    next.click();
+  }
+  return false;
+});
