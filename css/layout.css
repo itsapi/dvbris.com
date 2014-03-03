@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: "arrows";
-  src:url("../fonts/arrows.eot");
-  src:url("../fonts/arrows.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/arrows.ttf") format("truetype"),
-    url("../fonts/arrows.svg#arrows") format("svg"),
-    url("../fonts/arrows.woff") format("woff");
+  src: url("../fonts/arrows.eot");
+  src: url("../fonts/arrows.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/arrows.ttf") format("truetype"),
+       url("../fonts/arrows.svg#arrows") format("svg"),
+       url("../fonts/arrows.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
