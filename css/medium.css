@@ -6,10 +6,9 @@ h1 {
   margin: 0;
 }
 section {
-  flex-direction: column;
+  display: block;
 }
 article {
-  flex-basis: auto;
   position: relative;
   display: block;
   border: none;
