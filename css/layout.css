@@ -144,10 +144,10 @@ article:nth-child(3n+3):hover {
   box-shadow: 0 0 7px -2px black;
 }
 #prev {
-  left: -0.2em;
+  left: -0.8em;
 }
 #next {
-  right: -0.2em;
+  right: -0.8em;
 }
 #prev:hover, #next:hover {
   background-color: rgba(255, 255, 255, 0.6);
