@@ -1,3 +1,15 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "arrows";
+  src:url("../fonts/arrows.eot");
+  src:url("../fonts/arrows.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/arrows.ttf") format("truetype"),
+    url("../fonts/arrows.svg#arrows") format("svg"),
+    url("../fonts/arrows.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
   overflow-x: hidden;
 }
@@ -126,16 +138,16 @@ article:nth-child(3n+3):hover {
   border-radius: 25px;
   text-align: center;
   color: black;
-  font-size: 50px;
-  font-weight: bold;
+  font-family: arrows;
+  font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 7px -2px black;
 }
 #prev {
-  left: -0.5em;
+  left: -0.2em;
 }
 #next {
-  right: -0.5em;
+  right: -0.2em;
 }
 #prev:hover, #next:hover {
   background-color: rgba(255, 255, 255, 0.6);
