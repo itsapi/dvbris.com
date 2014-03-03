@@ -19,6 +19,22 @@ var pointer = 0;
 
 function update() {
   if (window.innerWidth >= 900) {
+
+    if (pointer == 0) {
+      prev.classList.add('disable');
+      console.log('disable prev')
+    } else {
+      prev.classList.remove('disable');
+      console.log('enable prev')
+    }
+    if (pointer == sites.length - 3) {
+      next.classList.add('disable');
+      console.log('disable next')
+    } else {
+      next.classList.remove('disable');
+      console.log('enable next')
+    }
+
     for (var i = 0; i < sites.length; i++) {
       if (i == pointer || i == pointer + 1 || i == pointer + 2) {
         sites[i].classList.remove('hidden');
@@ -26,23 +42,26 @@ function update() {
         sites[i].classList.add('hidden');
       }
     }
+
   } else {
+
     for (var i = 0; i < sites.length; i++) {
       sites[i].classList.remove('hidden');
     }
   }
 }
+
 update();
 
 addEvent(prev, 'click', function () {
-  if (pointer != 0) {
+  if (pointer > 0) {
     pointer--;
     update();
   }
   return false;
 });
 addEvent(next, 'click', function () {
-  if (pointer != sites.length - 3) {
+  if (pointer < sites.length - 3) {
     pointer++;
     update();
   }
