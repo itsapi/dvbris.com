@@ -58,14 +58,14 @@ addEvent(prev, 'click', function () {
     pointer--;
     update();
   }
-  return false;
+  event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
 addEvent(next, 'click', function () {
   if (pointer < sites.length - 3) {
     pointer++;
     update();
   }
-  return false;
+  event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
 addEvent(window, 'resize', function () {
   update();
