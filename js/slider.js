@@ -53,19 +53,19 @@ function update() {
 
 update();
 
-addEvent(prev, 'click', function () {
+addEvent(prev, 'click', function (event) {
   if (pointer > 0) {
     pointer--;
     update();
   }
-  return false;
+  event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
-addEvent(next, 'click', function () {
+addEvent(next, 'click', function (event) {
   if (pointer < sites.length - 3) {
     pointer++;
     update();
   }
-  return false;
+  event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
 addEvent(window, 'resize', function () {
   update();
