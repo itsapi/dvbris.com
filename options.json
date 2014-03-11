@@ -9,6 +9,7 @@
 		"projects",
 		"public",
 		"test",
-		"webalizer"
+		"webalizer",
+		"node_modules"
 	]
 }
