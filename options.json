@@ -5,11 +5,7 @@
 	"ignore": [
 		"adminer.php",
 		"favicon.ico",
-		"phpmailer",
 		"projects",
-		"public",
-		"test",
-		"webalizer",
-		"node_modules"
+		"public"
 	]
 }
