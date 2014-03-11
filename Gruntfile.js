@@ -1,6 +1,4 @@
 module.exports = function(grunt) {
-
-  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
@@ -47,7 +45,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-  // Default task(s).
   grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin']);
 
 };
