@@ -22,17 +22,13 @@ function update() {
 
     if (pointer == 0) {
       prev.classList.add('disable');
-      console.log('disable prev')
     } else {
       prev.classList.remove('disable');
-      console.log('enable prev')
     }
     if (pointer == sites.length - 3) {
       next.classList.add('disable');
-      console.log('disable next')
     } else {
       next.classList.remove('disable');
-      console.log('enable next')
     }
 
     for (var i = 0; i < sites.length; i++) {
