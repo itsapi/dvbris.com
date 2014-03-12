@@ -4,10 +4,10 @@ module.exports = function(grunt) {
     uglify: {
       combine: {
         options: {
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n\n'
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today() %> */\n\n'
         },
         files: {
-          'js/dist/main.min.js': ['js/src/*.js']
+          'build/js/main.min.js': ['src/js/*.js']
         }
       }
     },
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         },
         files: {
-          'css/dist/main.min.css': ['css/src/*.css']
+          'build/css/main.min.css': ['src/css/*.css']
         }
       }
     },
@@ -34,9 +34,28 @@ module.exports = function(grunt) {
           removeEmptyAttributes: true,
           removeOptionalTags: true
         },
-        files: {
-          'index.html': 'index.dev.html'
-        }
+        expand: true,
+        cwd: 'src',
+        src: ['**/*.html'],
+        dest: 'build/'
+      }
+    },
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src',
+            src: ['fonts/*'],
+            dest: 'build/'
+          },
+          {
+            expand: true,
+            cwd: 'src',
+            src: ['images/*'],
+            dest: 'build/'
+          }
+        ]
       }
     }
   });
@@ -44,7 +63,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin']);
+  grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin', 'copy']);
 
 };
