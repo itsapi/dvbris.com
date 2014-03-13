@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         options: {
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today() %> */\n'
         },
         files: {
           'build/css/main.min.css': ['src/css/*.css']
@@ -22,9 +22,9 @@ module.exports = function(grunt) {
       }
     },
     htmlmin: {
-      dev: {
+      main: {
         options: {
-          banner: '<!--! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> -->\n',
+          banner: '<!--! <%= pkg.name %> <%= grunt.template.today() %> -->\n',
           removeComments: true,
           collapseWhitespace: true,
           collapseBooleanAttributes: true,
