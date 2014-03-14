@@ -1,5 +1,5 @@
 {
-	"replace-keys": true,
+	"replace-keys": false,
 	"grunt": true,
 	"output": "/var/www",
 	"ignore": [
