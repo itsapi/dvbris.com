@@ -1,4 +1,4 @@
-var _prum = [['id', '52b85c12abe53d3f32000000'],
+var _prum = [['id', '{portfolio_pingdomID}'],
              ['mark', 'firstbyte', (new Date()).getTime()]];
 (function() {
     var s = document.getElementsByTagName('script')[0]
