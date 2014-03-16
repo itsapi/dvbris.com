@@ -50,5 +50,4 @@ names.forEach(function (name) {
 })
 addEvent(document, 'click', function (event) {
     hide_all()
-    event.preventDefault ? event.preventDefault() : event.returnValue = false
 })
