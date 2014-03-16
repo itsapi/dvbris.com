@@ -81,7 +81,7 @@ article a {
 .site-img-wrapper {
   width: 100%;
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
   background-color: rgba(217, 236, 253, 0.5);
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -100,7 +100,7 @@ article a {
 h3 {
   margin-bottom: 0;
 }
-h4 {
+h5 {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: normal;
