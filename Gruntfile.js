@@ -11,6 +11,12 @@ module.exports = function(grunt) {
         }
       }
     },
+    autoprefixer: {
+      main: {
+        expand: true,
+        src: 'src/css/*.css'
+      }
+    },
     cssmin: {
       combine: {
         options: {
