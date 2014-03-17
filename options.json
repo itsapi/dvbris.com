@@ -1,7 +1,6 @@
 {
 	"replace-keys": true,
 	"grunt": true,
-    "command": "node twitter.js",
 	"output": "/var/www",
 	"ignore": [
 		"adminer.php",
