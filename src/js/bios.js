@@ -37,7 +37,9 @@ names.forEach(function (name) {
         'http://node.dvbris.com/twitter?api_url=' +
         encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
         function (data) {
-            p.innerText = data
+            var description = JSON.parse(data).description
+            console.log(description)
+            p.innerText = description
         }
     )
     addAfter(h4, p)
