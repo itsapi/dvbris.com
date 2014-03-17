@@ -34,7 +34,8 @@ names.forEach(function (name) {
     var h4 = name.bio.getElementsByTagName('h4')[0]
     var p = document.createElement('p')
     makeRequest(
-        'https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id,
+        'http://node.dvbris.com/twitter?api_url=' +
+        encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
         function (data) {
             p.innerText = data
         }
