@@ -60,8 +60,14 @@ module.exports = function(grunt) {
             cwd: 'src',
             src: ['images/*'],
             dest: 'build/'
+          },
+          {
+            expand: true,
+            cwd: 'src',
+            src: ['twitter.js'],
+            dest: 'build/'
           }
-        ]
+        ],
       }
     }
   });
