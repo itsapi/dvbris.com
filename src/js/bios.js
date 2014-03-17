@@ -30,6 +30,17 @@ var links = [].slice.call(document.getElementsByTagName('h2')[0].childNodes)
 var names = link_bios(links, bios)
 
 names.forEach(function (name) {
+
+    var h4 = name.bio.getElementsByTagName('h4')[0]
+    var p = document.createElement('p')
+    makeRequest(
+        'https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id,
+        function (data) {
+            p.innerText = data
+        }
+    )
+    addAfter(h4, p)
+
     addEvent(name.anchor, 'click', function (event) {
         if (name.bio.classList.contains('closed')){
             hide_all()
