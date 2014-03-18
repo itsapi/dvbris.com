@@ -36,14 +36,20 @@
 #bios p:first-of-type {
   margin-top: 0;
 }
-#bios p a {
+#bios p a, #bios a.close {
   background-color: rgb(200, 200, 200);
   display: inline-block;
   border: 2px solid rgb(180, 180, 180);
   border-radius: 4px;
   padding: 7px 10px;
 }
-#bios p a:hover {
+#bios p a:hover, #bios a.close {
   background-color: rgb(190, 190, 190);
   border: 2px solid rgb(175, 175, 175);
+}
+#bios a.close {
+  font-size: .8em;
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }

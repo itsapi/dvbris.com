@@ -29,10 +29,19 @@ var bios  = [].slice.call(document.getElementById('bios').childNodes)
 var links = [].slice.call(document.getElementsByTagName('h2')[0].childNodes)
 var names = link_bios(links, bios)
 
-names.forEach(function (name) {
 
-    var h4 = name.bio.getElementsByTagName('h4')[0]
+names.forEach(function (name) {
+    var close_btn = document.createElement('a')
+    close_btn.classList.add('close')
+    close_btn.innerText = 'Close'
+    name.bio.appendChild(close_btn)
+    addEvent(close_btn, 'click', function (event) {
+        hide_all()
+        event.preventDefault ? event.preventDefault() : event.returnValue = false
+    })
+
     var p = document.createElement('p')
+    var h4 = name.bio.getElementsByTagName('h4')[0]
     makeRequest(
         'http://node.dvbris.com/twitter?api_url=' +
             encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
