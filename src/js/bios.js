@@ -35,12 +35,11 @@ names.forEach(function (name) {
     var p = document.createElement('p')
     makeRequest(
         'http://node.dvbris.com/twitter?api_url=' +
-        encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
-        function (data) {
-            var description = JSON.parse(data).description
-            console.log(description)
-            p.innerText = description
-        }
+            encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
+            function (data) {
+                var description = JSON.parse(data).description
+                p.innerText = description
+            }
     )
     addAfter(h4, p)
 

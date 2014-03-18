@@ -17,8 +17,8 @@ function addAfter(elem, add) {
     }
 }
 
-var httpRequest
 function makeRequest(url, cb) {
+    var httpRequest
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
         httpRequest = new XMLHttpRequest()
     } else if (window.ActiveXObject) { // IE
