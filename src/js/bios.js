@@ -3,7 +3,7 @@ function link_bios(links, bios) {
     var names = []
     links.forEach(function (anchor) {
         if (anchor.href) {
-            var name = anchor.getAttribute('href').slice(1)
+            var name = anchor.getAttribute('data-name')
             var bio
             bios.forEach(function (node) {
                 if (node.id == name) {
