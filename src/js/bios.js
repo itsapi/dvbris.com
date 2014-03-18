@@ -73,3 +73,8 @@ names.forEach(function (name) {
 addEvent(document, 'click', function (event) {
     hide_all()
 })
+addEvent(document, 'keydown', function (event) {
+    if (event.keyCode === 27) {
+        hide_all()
+    }
+})
