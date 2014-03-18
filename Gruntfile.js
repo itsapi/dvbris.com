@@ -7,7 +7,7 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today() %> */\n\n'
         },
         files: {
-          'build/js/main.min.js': ['src/js/*.js']
+          'build/js/main.min.js': ['src/js/*.js', '!src/js/main.min.js']
         }
       }
     },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today() %> */\n'
         },
         files: {
-          'build/css/main.min.css': ['src/css/*.css']
+          'build/css/main.min.css': ['src/css/*.css', '!src/css/main.min.css']
         }
       }
     },

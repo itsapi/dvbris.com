@@ -1,3 +1,5 @@
 *.sublime-*
 node_modules
 build
+main.min.css
+main.min.js
