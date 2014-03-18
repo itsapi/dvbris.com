@@ -23,13 +23,13 @@ function makeRequest(url, cb) {
         httpRequest = new XMLHttpRequest()
     } else if (window.ActiveXObject) { // IE
         try {
-        httpRequest = new ActiveXObject("Msxml2.XMLHTTP")
+            httpRequest = new ActiveXObject("Msxml2.XMLHTTP")
         }
         catch (e) {
-        try {
-        httpRequest = new ActiveXObject("Microsoft.XMLHTTP")
-        }
-        catch (e) {}
+            try {
+                httpRequest = new ActiveXObject("Microsoft.XMLHTTP")
+            }
+            catch (e) {}
         }
     }
 
