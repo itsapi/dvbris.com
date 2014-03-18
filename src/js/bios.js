@@ -29,7 +29,6 @@ var bios  = [].slice.call(document.getElementById('bios').childNodes)
 var links = [].slice.call(document.getElementsByTagName('h2')[0].childNodes)
 var names = link_bios(links, bios)
 
-
 names.forEach(function (name) {
     var close_btn = document.createElement('a')
     close_btn.classList.add('close')

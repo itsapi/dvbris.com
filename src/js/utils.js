@@ -32,7 +32,6 @@ function makeRequest(url, cb) {
             catch (e) {}
         }
     }
-
     if (!httpRequest) {
         console.log('Giving up :( Cannot create an XMLHTTP instance')
         return false
