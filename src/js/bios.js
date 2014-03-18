@@ -19,9 +19,26 @@ function link_bios(links, bios) {
     })
     return names
 }
-function hide_all() {
+
+function hide_all(names) {
     names.forEach(function (node) {
         node.bio.classList.add('closed')
+    })
+}
+
+function check_size() {
+    return (document.body.clientWidth < 599)
+}
+
+function on_resize(names) {
+    var size = check_size()
+    if (size) {
+        var val = 'none'
+    } else {
+        var val = 'default'
+    }
+    names.forEach(function (name) {
+        name.close_btn.style.display = val
     })
 }
 
@@ -30,12 +47,14 @@ var links = [].slice.call(document.getElementsByTagName('h2')[0].childNodes)
 var names = link_bios(links, bios)
 
 names.forEach(function (name) {
-    var close_btn = document.createElement('a')
-    close_btn.classList.add('close')
-    close_btn.innerText = 'Close'
-    name.bio.appendChild(close_btn)
-    addEvent(close_btn, 'click', function (event) {
-        hide_all()
+    name.bio.style.display = 'block'
+
+    name.close_btn = document.createElement('a')
+    name.close_btn.classList.add('close')
+    name.close_btn.innerText = 'Close'
+    name.bio.appendChild(name.close_btn)
+    addEvent(name.close_btn, 'click', function (event) {
+        hide_all(names)
         event.preventDefault ? event.preventDefault() : event.returnValue = false
     })
 
@@ -52,17 +71,19 @@ names.forEach(function (name) {
     addAfter(h4, p)
 
     addEvent(name.anchor, 'click', function (event) {
-        if (name.bio.classList.contains('closed')){
-            hide_all()
-            // Wait for any to close.
-            setTimeout(function () {
-                name.bio.classList.remove('closed')
-            }, 300)
-        } else {
-            hide_all()
+        if (!check_size()) {
+            if (name.bio.classList.contains('closed')){
+                hide_all(names)
+                // Wait for any to close.
+                setTimeout(function () {
+                    name.bio.classList.remove('closed')
+                }, 300)
+            } else {
+                hide_all(names)
+            }
+            event.stopPropagation()
+            event.preventDefault ? event.preventDefault() : event.returnValue = false
         }
-        event.stopPropagation()
-        event.preventDefault ? event.preventDefault() : event.returnValue = false
     })
 
     addEvent(name.bio, 'click', function (event) {
@@ -70,10 +91,14 @@ names.forEach(function (name) {
     })
 })
 addEvent(document, 'click', function (event) {
-    hide_all()
+    hide_all(names)
 })
 addEvent(document, 'keydown', function (event) {
     if (event.keyCode === 27) {
-        hide_all()
+        hide_all(names)
     }
 })
+addEvent(window, 'resize', function () {
+    on_resize(names)
+})
+on_resize(names)

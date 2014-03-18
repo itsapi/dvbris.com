@@ -10,6 +10,7 @@
   background-color: rgba(75, 75, 75, .85);
   color: white;
   transition: all 0.3s ease;
+  display: none;
 }
 #bios .closed {
   bottom: -100px;
@@ -39,6 +40,7 @@
   border: 2px solid rgb(180, 180, 180);
   border-radius: 4px;
   padding: 7px 10px;
+  margin: 5px;
 }
 #bios p a:hover, #bios a.close {
   background-color: rgb(190, 190, 190);
@@ -49,4 +51,22 @@
   position: absolute;
   top: 50px;
   right: 50px;
+}
+
+@media screen and (max-width: 599px) {
+  #bios aside, #bios .closed {
+    position: relative;
+    max-height: none;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    z-index: auto;
+    border-top: 3px solid rgba(0, 0, 0, .3);
+    padding: 25px;
+    transition: none;
+  }
+  #bios h4 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
 }
