@@ -27,7 +27,7 @@ function hide_all(names) {
 }
 
 function check_size() {
-    return (document.body.clientWidth < 599)
+    return (window.innerWidth < 650)
 }
 
 function on_resize(names) {
@@ -35,7 +35,7 @@ function on_resize(names) {
     if (size) {
         var val = 'none'
     } else {
-        var val = 'default'
+        var val = 'block'
     }
     names.forEach(function (name) {
         name.close_btn.style.display = val

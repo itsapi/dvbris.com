@@ -20,6 +20,7 @@
 #bios h4 {
   font-size: 6em;
   margin: 0;
+  margin-right: 150px;
 }
 #bios h4 a {
   color: rgb(200, 200, 230);
@@ -53,7 +54,7 @@
   right: 50px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 650px) {
   #bios aside, #bios .closed {
     position: relative;
     max-height: none;
