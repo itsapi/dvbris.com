@@ -54,7 +54,7 @@
   right: 50px;
 }
 
-@media screen and (max-width: 650px), (max-height: 450px) {
+@media screen and (max-width: 650px), screen and (max-height: 450px) {
   #bios aside, #bios .closed {
     position: relative;
     max-height: none;
