@@ -1,0 +1,36 @@
+@media screen and (max-width: 900px) {
+  h1 {
+    margin-left: 130px;
+  }
+  .sites {
+    display: block;
+    margin: 0;
+  }
+  section {
+    display: block;
+  }
+  article {
+    position: relative;
+    display: block;
+    border: none;
+    border-top: 3px solid rgba(0, 0, 0, .3);
+    width: 100%;
+  }
+  .site-img-wrapper {
+    float: left;
+    width: 236px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .site-img-wrapper img {
+    width: 200px;
+    height: 120px;
+  }
+  .site-text-wrapper {
+    padding: 10px;
+    min-height: 141px;
+  }
+  nav {
+    display: none;
+  }
+}

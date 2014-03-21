@@ -1,0 +1,20 @@
+@media screen and (max-width: 650px) {
+  h1 {
+    padding-top: 50px;
+    margin-left: 0;
+  }
+  header {
+    text-align: center;
+  }
+  .site-img-wrapper {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .site-img-wrapper img {
+    width: 60%;
+    height: auto;
+  }
+}
