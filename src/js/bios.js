@@ -27,7 +27,7 @@ function hide_all(names) {
 }
 
 function check_size() {
-    return (window.innerWidth < 650)
+    return ((window.innerWidth < 650) || (window.innerHeight < 450))
 }
 
 function on_resize(names) {
