@@ -7,6 +7,7 @@
     text-align: center;
   }
   .site-img-wrapper {
+    position: relative;
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
@@ -16,5 +17,8 @@
   .site-img-wrapper img {
     width: 60%;
     height: auto;
+  }
+  .site-text-wrapper {
+    margin: 0;
   }
 }

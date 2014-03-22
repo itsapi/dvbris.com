@@ -17,7 +17,9 @@
     width: 100%;
   }
   .site-img-wrapper {
+    position: absolute;
     float: left;
+    height: 100%;
     width: 236px;
     margin-right: 10px;
     display: inline-block;
@@ -27,6 +29,7 @@
     height: 120px;
   }
   .site-text-wrapper {
+    margin-left: 236px;
     padding: 10px;
     min-height: 141px;
   }
