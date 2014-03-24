@@ -52,7 +52,7 @@
   top: 50px;
   right: 50px; }
 
-@media screen and (max-width: 650px), screen and (max-height: 700px) {
+@media screen and (max-width: 650px), screen and (max-height: 600px) {
   #bios aside, #bios .closed {
     position: relative;
     max-height: none;
@@ -117,7 +117,6 @@
   src: url("../fonts/arrows.eot?#iefix") format("embedded-opentype"), url("../fonts/arrows.ttf") format("truetype"), url("../fonts/arrows.svg#arrows") format("svg"), url("../fonts/arrows.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-
 html, body {
   overflow-x: hidden; }
   @media all and (max-width: 300px) {
