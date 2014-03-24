@@ -1,5 +1,45 @@
-@import 'bios';
-@import 'ribbon';
+@charset "UTF-8";
+@font-face {
+  font-family: "arrows";
+  src: url("../fonts/arrows.eot");
+  src: url("../fonts/arrows.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/arrows.ttf") format("truetype"),
+       url("../fonts/arrows.svg#arrows") format("svg"),
+       url("../fonts/arrows.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  overflow-x: hidden;
+  @media all and (max-width: 300px) {
+    overflow-x: scroll;
+  }
+}
+
+html {
+  background-color: #5dcfc3;
+}
+
+body {
+  background-color: white;
+  font-family: 'Droid Sans', sans-serif;
+  margin: 0;
+  position: relative;
+  min-width: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(10, 50, 120);
+
+  &:hover {
+    color: rgb(90, 130, 200);
+  }
+}
+
 @import 'layout';
 @import 'medium';
 @import 'small';
+@import 'bios';
+@import 'ribbon';

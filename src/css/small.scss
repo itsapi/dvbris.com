@@ -1,11 +1,13 @@
 @media screen and (max-width: 650px) {
-  h1 {
-    padding-top: 50px;
-    margin-left: 0;
-  }
   header {
     text-align: center;
+
+    h1 {
+      padding-top: 50px;
+      margin-left: 0;
+    }
   }
+
   .site-img-wrapper {
     position: relative;
     margin-bottom: 10px;
@@ -13,11 +15,13 @@
     text-align: center;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
+    img {
+      width: 60%;
+      height: auto;
+    }
   }
-  .site-img-wrapper img {
-    width: 60%;
-    height: auto;
-  }
+
   .site-text-wrapper {
     margin: 0;
   }

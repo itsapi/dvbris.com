@@ -1,21 +1,31 @@
 @media screen and (max-width: 900px) {
-  h1 {
-    margin-left: 130px;
+  header {
+    h1 {
+      margin-left: 130px;
+    }
   }
+
   .sites {
     display: block;
     margin: 0;
+
+    nav {
+      display: none;
+    }
+
+    section {
+      display: block;
+
+      article {
+        position: relative;
+        display: block;
+        border: none;
+        border-top: 3px solid rgba(0, 0, 0, .3);
+        width: 100%;
+      }
+    }
   }
-  section {
-    display: block;
-  }
-  article {
-    position: relative;
-    display: block;
-    border: none;
-    border-top: 3px solid rgba(0, 0, 0, .3);
-    width: 100%;
-  }
+
   .site-img-wrapper {
     position: absolute;
     float: left;
@@ -23,17 +33,16 @@
     width: 236px;
     margin-right: 10px;
     display: inline-block;
+
+    img {
+      width: 200px;
+      height: 120px;
+    }
   }
-  .site-img-wrapper img {
-    width: 200px;
-    height: 120px;
-  }
+
   .site-text-wrapper {
     margin-left: 236px;
     padding: 10px;
     min-height: 141px;
-  }
-  nav {
-    display: none;
   }
 }

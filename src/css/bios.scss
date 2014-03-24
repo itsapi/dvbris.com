@@ -1,73 +1,82 @@
-#bios aside {
-  position: fixed;
-  overflow-y: hidden;
-  max-height: 700px;
-  z-index: 51;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 50px;
-  background-color: rgba(75, 75, 75, .85);
-  color: white;
-  transition: all 0.3s ease;
-  display: none;
-}
-#bios .closed {
-  bottom: -100px;
-  max-height: 0;
-}
+#bios {
+  aside {
+    position: fixed;
+    overflow-y: hidden;
+    max-height: 700px;
+    z-index: 51;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    background-color: rgba(75, 75, 75, .85);
+    color: white;
+    transition: all 0.3s ease;
+    display: none;
 
-#bios h4 {
-  font-size: 6em;
-  margin: 0;
-  margin-right: 150px;
-}
-#bios h4 a {
-  color: rgb(200, 200, 230);
-}
-#bios h4 a:hover {
-  color: rgba(255, 255, 255, .8);
-}
+    &.closed {
+      bottom: -100px;
+      max-height: 0;
+    }
 
-#bios p {
-  font-size: 1.5em;
-}
-#bios p:first-of-type {
-  margin-top: 0;
-}
-#bios p a, #bios a.close {
-  background-color: rgb(200, 200, 200);
-  display: inline-block;
-  border: 2px solid rgb(180, 180, 180);
-  border-radius: 4px;
-  padding: 7px 10px;
-  margin: 5px;
-}
-#bios p a:hover, #bios a.close {
-  background-color: rgb(190, 190, 190);
-  border: 2px solid rgb(175, 175, 175);
-}
-#bios a.close {
-  font-size: .8em;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-}
+    h4 {
+      font-size: 6em;
+      margin: 0;
+      margin-right: 150px;
 
-@media screen and (max-width: 650px), screen and (max-height: 600px) {
-  #bios aside, #bios .closed {
-    position: relative;
-    max-height: none;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    z-index: auto;
-    border-top: 3px solid rgba(0, 0, 0, .3);
-    padding: 25px;
-    transition: none;
-  }
-  #bios h4 {
-    font-size: 3em;
-    margin-bottom: 20px;
+      a {
+        color: rgb(200, 200, 230);
+
+        &:hover {
+          color: rgba(255, 255, 255, .8);
+        }
+      }
+    }
+
+    p {
+      font-size: 1.5em;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    p a, a.close {
+      background-color: rgb(200, 200, 200);
+      display: inline-block;
+      border: 2px solid rgb(180, 180, 180);
+      border-radius: 4px;
+      padding: 7px 10px;
+      margin: 5px;
+
+      &:hover {
+        background-color: rgb(190, 190, 190);
+        border: 2px solid rgb(175, 175, 175);
+        cursor: pointer;
+      }
+    }
+
+    a.close {
+      font-size: .8em;
+      position: absolute;
+      top: 50px;
+      right: 50px;
+    }
+
+    @media screen and (max-width: 650px), screen and (max-height: 600px) {
+      position: relative;
+      max-height: none;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      z-index: auto;
+      border-top: 3px solid rgba(0, 0, 0, .3);
+      padding: 25px;
+      transition: none;
+
+      h4 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+    }
   }
 }

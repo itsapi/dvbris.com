@@ -1,50 +1,17 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "arrows";
-  src: url("../fonts/arrows.eot");
-  src: url("../fonts/arrows.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/arrows.ttf") format("truetype"),
-       url("../fonts/arrows.svg#arrows") format("svg"),
-       url("../fonts/arrows.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-html, body {
-  overflow-x: hidden;
-  @media all and (max-width: 300px) {
-    overflow-x: scroll;
-  }
-}
-html {
-  background-color: #5dcfc3;
-}
-body {
-  background-color: white;
-  font-family: 'Droid Sans', sans-serif;
-  margin: 0 auto;
-  position: relative;
-  min-width: 300px;
-}
-a {
-  text-decoration: none;
-  color: rgb(10, 50, 120);
-  &:hover {
-    color: rgb(90, 130, 200);
-  }
-}
-
 header {
   text-align: right;
   margin: 0 30px;
+
   h1, h2 {
     font-weight: normal;
   }
+
   h1 {
     font-family: 'Gruppo', cursive;
     font-size: 5em;
-    margin: 0 auto;
+    margin: 0;
   }
+
   h2 {
     font-size: 3em;
     margin-top: 0;
@@ -54,31 +21,61 @@ header {
 .sites {
   margin: 50px;
   position: relative;
+
   section {
     display: table;
     width: 100%;
     table-layout: fixed;
-  }
-}
-article {
-  display: table-cell;
-  height: 100%;
-  position: relative;
-  border-left: 3px solid rgba(0, 0, 0, .3);
-  &.hidden {
-    display: none
-  }
-  a {
-    font-size: 1.3em;
-    color: black;
-    display: block;
-    margin: 0;
-    padding: 0;
-    &:hover {
-      color: black;
+
+    article {
+      display: table-cell;
+      height: 100%;
+      position: relative;
+      border-left: 3px solid rgba(0, 0, 0, .3);
+
+      &.hidden {
+        display: none
+      }
+
+      a {
+        font-size: 1.3em;
+        color: black;
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+          color: black;
+        }
+      }
+
+      &:nth-child(3n+1) {
+        background-color: #ff8900;
+      }
+
+      &:nth-child(3n+1):hover {
+        background-color: #ff9910;
+      }
+
+      &:nth-child(3n+2) {
+        background-color: #a8f000;
+      }
+
+      &:nth-child(3n+2):hover {
+        background-color: #b8ff10;
+      }
+
+      &:nth-child(3n+3) {
+        background-color: #40a5db;
+      }
+
+      &:nth-child(3n+3):hover {
+        background-color: #50b5eb;
+      }
     }
   }
 }
+
 .site-img-wrapper {
   width: 100%;
   text-align: center;
@@ -86,6 +83,7 @@ article {
   background-color: rgba(217, 236, 253, 0.5);
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
   img {
     border: 3px solid black;
     border-radius: 3px;
@@ -94,6 +92,7 @@ article {
     max-width: 400px;
   }
 }
+
 .site-text-wrapper {
   padding: 0 10px;
   min-height: 161px;
@@ -107,24 +106,7 @@ article {
     font-style: italic;
   }
 }
-article:nth-child(3n+1) {
-  background-color: #ff8900;
-}
-article:nth-child(3n+1):hover {
-  background-color: #ff9910;
-}
-article:nth-child(3n+2) {
-  background-color: #a8f000;
-}
-article:nth-child(3n+2):hover {
-  background-color: #b8ff10;
-}
-article:nth-child(3n+3) {
-  background-color: #40a5db;
-}
-article:nth-child(3n+3):hover {
-  background-color: #50b5eb;
-}
+
 #prev, #next {
   display: none;
   position: absolute;
@@ -140,18 +122,22 @@ article:nth-child(3n+3):hover {
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 7px -2px black;
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
   }
+
   &.disable {
     cursor: default !important;
     background-color: rgba(230, 230, 230, 0.7) !important;
   }
 }
+
 #prev {
   left: -0.8em;
 }
+
 #next {
   right: -0.8em;
 }

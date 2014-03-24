@@ -1,58 +1,52 @@
-.ribbon-wrapper {
+.ribbon {
   position: absolute;
   top: 0;
   left: 0;
   margin: 0;
   overflow: hidden;
-}
-.ribbon {
-  display: block;
-  color: white;
-  text-align: center;
 
-  /* Next two add up to 35px: */
-  font: bold 19px Sans-Serif;
-  padding: 16px 0;
+  a {
+    display: block;
+    color: white;
+    text-align: center;
 
-  background-color: #cc4125;
-  color: white;
-  text-decoration: underline;
-}
-.ribbon:hover {
-  color: white;
-  background-color: #dc5135;
-}
+    /* Next two add up to 35px: */
+    font: bold 19px Sans-Serif;
+    padding: 16px 0;
 
-@media all and (min-width: 651px) {
-  .ribbon-wrapper {
+    background-color: #cc4125;
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      color: white;
+      background-color: #dc5135;
+    }
+  }
+
+  @media all and (min-width: 651px) {
     /* Total width and height, should be the same. */
     width: 150px;
     height: 150px;
 
+    a {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform:    rotate(-45deg);
+      -ms-transform:     rotate(-45deg);
+      -o-transform:      rotate(-45deg);
+      position: relative;
+
+      /* Next two trial and error: */
+      right:  -30px;
+      top: 30px;
+      /* Double .ribbon-wrapper width/height. */
+      width: 250px;
+
+      float: right;
+    }
   }
 
-  .ribbon {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform:    rotate(-45deg);
-    -ms-transform:     rotate(-45deg);
-    -o-transform:      rotate(-45deg);
-    position: relative;
-
-    /* Next two trial and error: */
-    right:  -30px;
-    top: 30px;
-    /* Double .ribbon-wrapper width/height. */
-    width: 250px;
-
-    float: right;
-  }
-}
-
-@media all and (max-width: 650px) {
-  .ribbon-wrapper {
+  @media all and (max-width: 650px) {
     width: 100%;
-  }
-  .ribbon {
-
   }
 }
