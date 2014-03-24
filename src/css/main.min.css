@@ -63,24 +63,24 @@ header {
           color: black; }
       .sites section article:nth-child(3n+1) {
         background-color: #ff8900; }
-      .sites section article:nth-child(3n+1):hover {
-        background-color: #ff9910; }
+        .sites section article:nth-child(3n+1):hover {
+          background-color: #ff971f; }
       .sites section article:nth-child(3n+2) {
         background-color: #a8f000; }
-      .sites section article:nth-child(3n+2):hover {
-        background-color: #b8ff10; }
+        .sites section article:nth-child(3n+2):hover {
+          background-color: #b7ff10; }
       .sites section article:nth-child(3n+3) {
         background-color: #40a5db; }
-      .sites section article:nth-child(3n+3):hover {
-        background-color: #50b5eb; }
+        .sites section article:nth-child(3n+3):hover {
+          background-color: #5ab1e0; }
 
 .site-img-wrapper {
   width: 100%;
   text-align: center;
   padding: 15px 0;
   background-color: rgba(217, 236, 253, 0.5);
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .site-img-wrapper img {
     border: 3px solid black;
@@ -181,8 +181,8 @@ footer {
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .site-img-wrapper img {
       width: 60%;
@@ -277,9 +277,8 @@ footer {
       height: 150px; }
       .ribbon a {
         -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
         position: relative;
         /* Next two trial and error: */
         right: -30px;

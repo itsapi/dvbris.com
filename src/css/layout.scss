@@ -49,28 +49,19 @@ header {
         }
       }
 
-      &:nth-child(3n+1) {
-        background-color: #ff8900;
-      }
+      $colors: #ff8900,
+               #a8f000,
+               #40a5db;
+      $i: 0;
+      @each $color in $colors {
+        $i: $i + 1;
+        &:nth-child(3n+#{$i}) {
+          background-color: $color;
 
-      &:nth-child(3n+1):hover {
-        background-color: #ff9910;
-      }
-
-      &:nth-child(3n+2) {
-        background-color: #a8f000;
-      }
-
-      &:nth-child(3n+2):hover {
-        background-color: #b8ff10;
-      }
-
-      &:nth-child(3n+3) {
-        background-color: #40a5db;
-      }
-
-      &:nth-child(3n+3):hover {
-        background-color: #50b5eb;
+          &:hover {
+            background-color: lighten($color, 6%);
+          }
+        }
       }
     }
   }
@@ -81,7 +72,6 @@ header {
   text-align: center;
   padding: 15px 0;
   background-color: rgba(217, 236, 253, 0.5);
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   img {
