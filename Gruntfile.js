@@ -49,6 +49,14 @@ module.exports = function(grunt) {
     },
 
     // HTML
+    processhtml: {
+      main: {
+        expand: true,
+        cwd: 'src',
+        src: ['**/*.html'],
+        dest: 'tmp/'
+      }
+    },
     htmlmin: {
       main: {
         options: {
@@ -63,7 +71,7 @@ module.exports = function(grunt) {
           removeOptionalTags: true
         },
         expand: true,
-        cwd: 'src',
+        cwd: 'tmp',
         src: ['**/*.html'],
         dest: 'build/'
       }
@@ -96,8 +104,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-processhtml');
 
-  grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer:main', 'cssmin', 'htmlmin', 'copy']);
-  grunt.registerTask('dev', ['sass', 'autoprefixer:dev']);
+  grunt.registerTask('default', [
+    'uglify',
+    'sass',
+    'autoprefixer:main',
+    'cssmin',
+    'processhtml',
+    'htmlmin',
+    'copy'
+  ]);
+  grunt.registerTask('dev', [
+    'sass',
+    'autoprefixer:dev'
+  ]);
 
 };
