@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       },
       dev: {
         src: 'tmp/main.css',
-        dest: 'src/css/main.min.css'
+        dest: 'src/css/main.css'
       }
     },
     cssmin: {
@@ -109,6 +109,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'uglify',
     'sass',
+    'autoprefixer:dev',
     'autoprefixer:main',
     'cssmin',
     'processhtml',
