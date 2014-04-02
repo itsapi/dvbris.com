@@ -13,9 +13,7 @@ module.exports = function(grunt) {
             'src/js/utils.js',
             'src/js/bios.js',
             'src/js/slider.js',
-            'src/js/pingdom.js',
-
-            '!src/js/main.min.js'
+            'src/js/pingdom.js'
           ]
         }
       }
