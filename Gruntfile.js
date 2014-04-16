@@ -91,7 +91,7 @@ module.exports = function(grunt) {
             src: ['images/*'],
             dest: 'build/'
           }
-        ],
+        ]
       }
     }
   });
