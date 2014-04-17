@@ -93,12 +93,12 @@ header {
     min-width: 200px;
     max-width: 400px; }
 
-.site-text-wrapper, .text p {
+.site-text-wrapper {
   padding: 0 10px;
   min-height: 161px; }
-  .site-text-wrapper h3, .text p h3 {
+  .site-text-wrapper h3 {
     margin-bottom: 0; }
-  .site-text-wrapper h5, .text p h5 {
+  .site-text-wrapper h5 {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: normal;
@@ -182,7 +182,7 @@ footer {
 
   .text h3 {
     margin: 0; }
-  .text p {
+  .text .site-text-wrapper {
     min-height: 0;
     text-align: center; } }
 @media screen and (max-width: 650px) {
