@@ -183,6 +183,7 @@ footer {
   .text h3 {
     margin: 0; }
   .text .site-text-wrapper {
+    margin-left: 0;
     min-height: 0;
     text-align: center; } }
 @media screen and (max-width: 650px) {
