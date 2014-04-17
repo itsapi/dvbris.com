@@ -36,7 +36,7 @@ header {
   header h1, header h2 {
     font-weight: normal; }
   header h1 {
-    font-family: 'Gruppo', cursive;
+    font-family: 'Gruppo', sans-serif;
     font-size: 5em;
     margin: 0; }
   header h2 {
@@ -107,6 +107,7 @@ header {
 .text {
   vertical-align: top; }
   .text h3 {
+    font-family: 'Gruppo', sans-serif;
     font-size: 3.4em;
     text-align: center; }
 
