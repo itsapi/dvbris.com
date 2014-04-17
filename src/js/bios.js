@@ -35,7 +35,7 @@ function on_resize(names) {
     if (size) {
         names.forEach(function (node) {
             node.bio.classList.add('small')
-        })        
+        })
         hide_all(names)
     } else {
         names.forEach(function (node) {
@@ -53,7 +53,7 @@ names.forEach(function (name) {
 
     name.close_btn = document.createElement('a')
     name.close_btn.classList.add('close')
-    name.close_btn.innerText = 'Close'
+    name.close_btn.innerHTML = 'Close'
     name.bio.appendChild(name.close_btn)
     addEvent(name.close_btn, 'click', function (event) {
         hide_all(names)

@@ -265,6 +265,8 @@ footer {
     #bios aside.small h4 {
       font-size: 3em;
       margin-bottom: 20px; }
+    #bios aside.small a.close {
+      display: none; }
 
 .ribbon {
   position: absolute;
