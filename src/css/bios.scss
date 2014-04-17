@@ -13,11 +13,6 @@
     transition: all 0.3s ease;
     display: none;
 
-    &.closed {
-      bottom: -100px;
-      max-height: 0;
-    }
-
     h4 {
       font-size: 6em;
       margin: 0;
@@ -62,10 +57,15 @@
       right: 50px;
     }
 
-    @media screen and (max-width: 650px), screen and (max-height: 600px) {
-      position: relative;
-      max-height: none;
+    &.closed {
+      bottom: -100px;
+      max-height: 0;
+    }
+
+    &.small{
       bottom: auto;
+      max-height: none;
+      position: relative;
       left: auto;
       right: auto;
       z-index: auto;
