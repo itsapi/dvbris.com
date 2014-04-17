@@ -45,4 +45,14 @@
     padding: 10px;
     min-height: 141px;
   }
+
+  .text {
+    h3 {
+      margin: 0;
+    }
+    p {
+      min-height: 0;
+      text-align: center;
+    }
+  }
 }

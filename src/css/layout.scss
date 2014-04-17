@@ -28,6 +28,7 @@ header {
     table-layout: fixed;
 
     article {
+      font-size: 1.3em;
       display: table-cell;
       height: 100%;
       position: relative;
@@ -35,18 +36,6 @@ header {
 
       &.hidden {
         display: none
-      }
-
-      a {
-        font-size: 1.3em;
-        color: black;
-        display: block;
-        margin: 0;
-        padding: 0;
-
-        &:hover {
-          color: black;
-        }
       }
 
       $colors: #ff8900,
@@ -61,6 +50,19 @@ header {
           &:hover {
             background-color: lighten($color, 6%);
           }
+        }
+      }
+    }
+
+    article:not(.text) {
+      a {
+        color: black;
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+          color: black;
         }
       }
     }
@@ -83,7 +85,7 @@ header {
   }
 }
 
-.site-text-wrapper {
+.site-text-wrapper, .text p {
   padding: 0 10px;
   min-height: 161px;
   h3 {
@@ -94,6 +96,14 @@ header {
     margin-bottom: 0;
     font-weight: normal;
     font-style: italic;
+  }
+}
+
+.text {
+  vertical-align: top;
+  h3 {
+    font-size: 3.4em;
+    text-align: center;
   }
 }
 
