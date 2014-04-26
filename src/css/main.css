@@ -26,13 +26,17 @@ a {
   a:hover {
     color: #5a82c8; }
 
+#hire {
+  background-color: #5dcfc3;
+  padding: 10px; }
+
 header {
   text-align: right;
   margin: 0 30px; }
   header h1, header h2 {
     font-weight: normal; }
   header h1 {
-    font-family: 'Gruppo', cursive;
+    font-family: 'Gruppo', sans-serif;
     font-size: 5em;
     margin: 0; }
   header h2 {
@@ -47,20 +51,13 @@ header {
     width: 100%;
     table-layout: fixed; }
     .sites section article {
+      font-size: 1.3em;
       display: table-cell;
       height: 100%;
       position: relative;
       border-left: 3px solid rgba(0, 0, 0, 0.3); }
       .sites section article.hidden {
         display: none; }
-      .sites section article a {
-        font-size: 1.3em;
-        color: black;
-        display: block;
-        margin: 0;
-        padding: 0; }
-        .sites section article a:hover {
-          color: black; }
       .sites section article:nth-child(3n+1) {
         background-color: #ff8900; }
         .sites section article:nth-child(3n+1):hover {
@@ -73,6 +70,13 @@ header {
         background-color: #40a5db; }
         .sites section article:nth-child(3n+3):hover {
           background-color: #5ab1e0; }
+    .sites section article:not(.text) a {
+      color: black;
+      display: block;
+      margin: 0;
+      padding: 0; }
+      .sites section article:not(.text) a:hover {
+        color: black; }
 
 .site-img-wrapper {
   width: 100%;
@@ -99,6 +103,13 @@ header {
     margin-bottom: 0;
     font-weight: normal;
     font-style: italic; }
+
+.text {
+  vertical-align: top; }
+  .text h3 {
+    font-family: 'Gruppo', sans-serif;
+    font-size: 3.4em;
+    text-align: center; }
 
 #prev, #next {
   display: none;
@@ -168,7 +179,14 @@ footer {
   .site-text-wrapper {
     margin-left: 236px;
     padding: 10px;
-    min-height: 141px; } }
+    min-height: 141px; }
+
+  .text h3 {
+    margin: 0; }
+  .text .site-text-wrapper {
+    margin-left: 0;
+    min-height: 0;
+    text-align: center; } }
 @media screen and (max-width: 650px) {
   header {
     text-align: center; }
@@ -204,9 +222,6 @@ footer {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: none; }
-  #bios aside.closed {
-    bottom: -100px;
-    max-height: 0; }
   #bios aside h4 {
     font-size: 6em;
     margin: 0;
@@ -235,21 +250,25 @@ footer {
     position: absolute;
     top: 50px;
     right: 50px; }
-  @media screen and (max-width: 650px), screen and (max-height: 600px) {
-    #bios aside {
-      position: relative;
-      max-height: none;
-      bottom: auto;
-      left: auto;
-      right: auto;
-      z-index: auto;
-      border-top: 3px solid rgba(0, 0, 0, 0.3);
-      padding: 25px;
-      -webkit-transition: none;
-      transition: none; }
-      #bios aside h4 {
-        font-size: 3em;
-        margin-bottom: 20px; } }
+  #bios aside.closed {
+    bottom: -100px;
+    max-height: 0; }
+  #bios aside.small {
+    bottom: auto;
+    max-height: none;
+    position: relative;
+    left: auto;
+    right: auto;
+    z-index: auto;
+    border-top: 3px solid rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    -webkit-transition: none;
+    transition: none; }
+    #bios aside.small h4 {
+      font-size: 3em;
+      margin-bottom: 20px; }
+    #bios aside.small a.close {
+      display: none; }
 
 .ribbon {
   position: absolute;

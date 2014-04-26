@@ -33,13 +33,15 @@ function check_size() {
 function on_resize(names) {
     var size = check_size()
     if (size) {
-        var val = 'none'
+        names.forEach(function (node) {
+            node.bio.classList.add('small')
+        })
+        hide_all(names)
     } else {
-        var val = 'block'
+        names.forEach(function (node) {
+            node.bio.classList.remove('small')
+        })
     }
-    names.forEach(function (name) {
-        name.close_btn.style.display = val
-    })
 }
 
 var bios  = [].slice.call(document.getElementById('bios').childNodes)
@@ -51,7 +53,7 @@ names.forEach(function (name) {
 
     name.close_btn = document.createElement('a')
     name.close_btn.classList.add('close')
-    name.close_btn.innerText = 'Close'
+    name.close_btn.innerHTML = 'Close'
     name.bio.appendChild(name.close_btn)
     addEvent(name.close_btn, 'click', function (event) {
         hide_all(names)
