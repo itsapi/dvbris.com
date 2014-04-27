@@ -88,6 +88,18 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+    watch: {
+      css: {
+        files: ['src/css/*.scss'],
+        tasks: ['dev']
+      },
+      reload: {
+        files: ['**/*'],
+        options: {
+          livereload: true
+        }
+      }
     }
   });
 
@@ -98,6 +110,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks("grunt-contrib-watch");
 
   grunt.registerTask('default', [
     'uglify',
