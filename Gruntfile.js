@@ -95,7 +95,7 @@ module.exports = function(grunt) {
         tasks: ['dev']
       },
       reload: {
-        files: ['**/*'],
+        files: ['src/**/*'],
         options: {
           livereload: true
         }
