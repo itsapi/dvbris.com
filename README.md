@@ -1,4 +1,4 @@
 [Portfolio](http://dvbris.com)
 ==============================
 
-A colourful portfolio of all our websites.
+A colourful portfolio for all our websites.
