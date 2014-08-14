@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Gruppo">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans:400,700|Gruppo">
     <!-- build:css css/main.min.css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- /build -->
@@ -30,8 +30,8 @@
 
     <div class="sites">
       <nav>
-        <a href="#" id="prev">&lt;</a>
-        <a href="#" id="next">&gt;</a>
+        <a href="#" id="prev" title="Left">&lt;</a>
+        <a href="#" id="next" title="Right">&gt;</a>
       </nav>
 
       <section>
@@ -43,7 +43,19 @@
           </div>
         </article>
 
-        <!-- build:[src] https://dl.dropboxusercontent.com/spa/3jurnyon2jw6230/dvbris.com/static/ -->
+        <article>
+          <a href="http://respawnnetwork.com">
+            <div class="site-img-wrapper">
+              <img alt="Screenshot of http://respawnnetwork.com" src="images/respawn.png">
+            </div>
+            <div class="site-text-wrapper">
+              <h3>Respawn Network</h3>
+              <h5>respawnnetwork.com</h5>
+              <p>A website for the Respawn Network Minecraft server.</p>
+            </div>
+          </a>
+        </article>
+
         <article>
           <a href="http://itsapi.co.uk">
             <div class="site-img-wrapper">
@@ -134,7 +146,6 @@
             </div>
           </a>
         </article>
-        <!-- /build -->
       </section>
     </div>
 
@@ -170,11 +181,11 @@
     </footer>
 
     <!-- build:js js/main.min.js -->
+    <script src="js/google.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/bios.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/pingdom.js"></script>
-    <script src="//localhost:35729/livereload.js"></script>
     <!-- /build -->
 
   </body>
