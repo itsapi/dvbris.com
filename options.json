@@ -11,7 +11,8 @@
 	"hosts": {
 		"vps87319": {
 			"output": "/var/www/projects/dvbris.com",
-			"url": "http://oliverfaircliff.com/projects/dvbris.com"
+			"url": "http://oliverfaircliff.com/projects/dvbris.com",
+			"ignore": []
 		}
 	}
 }
