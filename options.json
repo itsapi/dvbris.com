@@ -10,7 +10,8 @@
 	"url": "http://dvbris.com",
 	"hosts": {
 		"vps87319": {
-			"output": "/var/www/projects/dvbris.com"
+			"output": "/var/www/projects/dvbris.com",
+			"url": "http://oliverfaircliff.com/projects/dvbris.com"
 		}
 	}
 }
