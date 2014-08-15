@@ -3,7 +3,6 @@
 	"output": "/var/www",
 	"ignore": [
 		"adminer.php",
-		"favicon.ico",
 		"projects",
 		"public"
 	],
