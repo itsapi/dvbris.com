@@ -10,7 +10,9 @@
 	"hosts": {
 		"vps87319": {
 			"output": "/var/www/dvbris.com",
-			"ignore": []
+			"ignore": [
+				"respawn"
+			]
 		}
 	}
 }
