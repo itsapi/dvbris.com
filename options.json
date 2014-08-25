@@ -4,7 +4,9 @@
 	"ignore": [
 		"adminer.php",
 		"projects",
-		"public"
+		"public",
+		"_h5ai",
+		".htaccess"
 	],
 	"url": "http://dvbris.com",
 	"hosts": {
