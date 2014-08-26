@@ -15,6 +15,10 @@
 			"ignore": [
 				"respawn"
 			]
+		},
+		"raspberrypi": {
+			"output": "/var/www/projects/dvbris.com",
+			"ignore": []
 		}
 	}
 }
