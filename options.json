@@ -1,24 +1,16 @@
 {
 	"grunt": true,
-	"output": "/var/www",
-	"ignore": [
-		"adminer.php",
-		"projects",
-		"public",
-		"_h5ai",
-		".htaccess"
-	],
-	"url": "http://dvbris.com",
 	"hosts": {
 		"vps87319": {
 			"output": "/var/www/dvbris.com",
 			"ignore": [
 				"respawn"
-			]
+			],
+			"url": "http://dvbris.com"
 		},
 		"raspberrypi": {
 			"output": "/var/www/projects/dvbris.com",
-			"ignore": []
+			"url": "http://pi.dvbris.com/projects/dvbris.com"
 		}
 	}
 }
