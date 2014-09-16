@@ -4,7 +4,9 @@
 	"ignore": [
 		"adminer.php",
 		"projects",
-		"public"
+		"public",
+		"_h5ai",
+		".htaccess"
 	],
 	"url": "http://dvbris.com",
 	"hosts": {
@@ -13,6 +15,10 @@
 			"ignore": [
 				"respawn"
 			]
+		},
+		"raspberrypi": {
+			"output": "/var/www/projects/dvbris.com",
+			"ignore": []
 		}
 	}
 }
