@@ -19,19 +19,14 @@ function addAfter(elem, add) {
 
 function makeRequest(url, cb) {
     var httpRequest
-    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-        httpRequest = new XMLHttpRequest()
-    } else if (window.ActiveXObject) { // IE
-        try {
-            httpRequest = new ActiveXObject("Msxml2.XMLHTTP")
-        }
-        catch (e) {
-            try {
-                httpRequest = new ActiveXObject("Microsoft.XMLHTTP")
-            }
-            catch (e) {}
-        }
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        httpRequest = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
     }
+
     if (!httpRequest) {
         console.log('Giving up :( Cannot create an XMLHTTP instance')
         return false

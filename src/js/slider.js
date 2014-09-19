@@ -7,7 +7,8 @@ next.style.display = 'block';
 var pointer = 0;
 
 function update() {
-  if (window.innerWidth > 900) {
+  var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if (width > 900) {
 
     if (pointer == 0) {
       prev.classList.add('disable');

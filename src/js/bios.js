@@ -27,7 +27,9 @@ function hide_all(names) {
 }
 
 function check_size() {
-    return ((window.innerWidth < 650) || (window.innerHeight < 600))
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    return ((width < 650) || (height < 600))
 }
 
 function on_resize(names) {
@@ -44,8 +46,15 @@ function on_resize(names) {
     }
 }
 
-var bios  = [].slice.call(document.getElementById('bios').childNodes)
-var links = [].slice.call(document.getElementsByTagName('h2')[0].childNodes)
+function slice(elems) {
+    var list = [];
+    for (var i = 0; i < elems.length; i++) {
+        list.push(elems[i]);
+    }
+    return list;
+}
+var bios  = slice(document.getElementById('bios').childNodes)
+var links = slice(document.getElementsByTagName('h2')[0].childNodes)
 var names = link_bios(links, bios)
 
 names.forEach(function (name) {
@@ -63,7 +72,7 @@ names.forEach(function (name) {
     var p = document.createElement('p')
     var h4 = name.bio.getElementsByTagName('h4')[0]
     makeRequest(
-        'http://twitter.oliverfaircliff.com?api_url=' +
+        'http://node.dvbris.com/twitter?api_url=' +
             encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
         function (data) {
             var description = JSON.parse(data).description
