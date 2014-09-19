@@ -18,28 +18,49 @@ function addAfter(elem, add) {
 }
 
 function makeRequest(url, cb) {
-    var httpRequest
-    if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        httpRequest = new XMLHttpRequest();
-    } else {
-        // code for IE6, IE5
-        httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+    // IE8 & 9 only Cross domain JSON GET request
+    if ('XDomainRequest' in window && window.XDomainRequest !== null) {
+        var xdr = new XDomainRequest() // Use Microsoft XDR
+        xdr.open('GET', url)
+        xdr.onload = function () {
+            cb(xdr.responseText)
+        };
+        xdr.onerror = function() {
+            _result = false;
+        };
+        xdr.send()
     }
 
-    if (!httpRequest) {
-        console.log('Giving up :( Cannot create an XMLHTTP instance')
-        return false
+    // IE7 and lower can't do cross domain
+    else if (navigator.userAgent.indexOf('MSIE') != -1 &&
+             parseInt(navigator.userAgent.match(/MSIE ([\d.]+)/)[1], 10) < 8) {
+       return false;
     }
-    httpRequest.onreadystatechange = function () {
-        if (httpRequest.readyState === 4) {
-            if (httpRequest.status === 200) {
-                cb(httpRequest.responseText)
-            } else {
-                console.log('There was a problem with the request.')
+
+    else {
+        var httpRequest
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            httpRequest = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (!httpRequest) {
+            console.log('Giving up :( Cannot create an XMLHTTP instance')
+            return false
+        }
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState === 4) {
+                if (httpRequest.status === 200) {
+                    cb(httpRequest.responseText)
+                } else {
+                    console.log('There was a problem with the request.')
+                }
             }
         }
+        httpRequest.open('GET', url)
+        httpRequest.send()
     }
-    httpRequest.open('GET', url)
-    httpRequest.send()
 }
