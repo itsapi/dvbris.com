@@ -231,6 +231,7 @@ footer {
   left: 0;
   right: 0;
   padding: 50px;
+  background-color: #4b4b4b;
   background-color: rgba(75, 75, 75, 0.85);
   color: white;
   -webkit-transition: all 0.3s ease;

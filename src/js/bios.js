@@ -92,13 +92,13 @@ names.forEach(function (name) {
             } else {
                 hide_all(names)
             }
-            event.stopPropagation()
+            if (event.stopPropagation) event.stopPropagation()
             event.preventDefault ? event.preventDefault() : event.returnValue = false
         }
     })
 
     addEvent(name.bio, 'click', function (event) {
-        event.stopPropagation()
+        if (event.stopPropagation) event.stopPropagation()
     })
 })
 addEvent(document, 'click', function (event) {
