@@ -23,47 +23,37 @@ header {
   position: relative;
 
   section {
-    position: relative;
     width: 100%;
     display: table;
     &:not(ie) { table-layout: fixed; }
 
     article {
+      padding: 0;
       font-size: 1.3em;
       display: table-cell;
-      height: 100%;
-      position: relative;
-      border-left: 3px solid #000;
-      border-color: rgba(0, 0, 0, .3);
+      border-left: 3px solid rgba(0, 0, 0, .3);
+      &.hidden { display: none }
 
-      &.hidden {
-        display: none
+      @mixin bg-hover($color) {
+        background-color: $color;
+        &:hover { background-color: lighten($color, 6%); }
       }
 
-      background-color: #a8f000;
-      &:hover { background-color: lighten(#a8f000, 6%); }
-      &:first-child { background-color: #ff8900;
-        &:hover { background-color: lighten(#ff8900, 6%); }}
-
-      $colors: #ff8900,
-               #a8f000,
-               #40a5db;
-      $i: 0;
+      $colors: #ff8900, #a8f000, #40a5db;
+      @include bg-hover(nth($colors, 2));
+      &:first-child { @include bg-hover(nth($colors, 1)); }
       @each $color in $colors {
-        $i: $i + 1;
-        &:nth-child(3n+#{$i}) {
-          background-color: $color;
-
-          &:hover {
-            background-color: lighten($color, 6%);
-          }
+        &:nth-child(3n+#{index($colors, $color)}) {
+          @include bg-hover($color);
         }
       }
+
       a {
         color: black;
         display: block;
         margin: 0;
         padding: 0;
+        height: 100%;
 
         &:hover {
           color: black;
