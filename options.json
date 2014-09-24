@@ -2,7 +2,7 @@
 	"grunt": true,
 	"email": [
 		"mail@dvbris.com"
-	]
+	],
 	"hosts": {
 		"vps87319": {
 			"output": "/var/www/dvbris.com",
