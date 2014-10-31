@@ -11,6 +11,13 @@
 			],
 			"url": "http://dvbris.com"
 		},
+		"geraint-vps": {
+			"output": "/var/www/dvbris.com",
+			"ignore": [
+				"respawn"
+			],
+			"url": "http://dvbris.com"
+		},
 		"raspberrypi": {
 			"output": "/var/www/projects/dvbris.com",
 			"url": "http://pi.dvbris.com/projects/dvbris.com"
