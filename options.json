@@ -4,13 +4,6 @@
 		"mail@dvbris.com"
 	],
 	"hosts": {
-		"vps87319": {
-			"output": "/var/www/dvbris.com",
-			"ignore": [
-				"respawn"
-			],
-			"url": "http://dvbris.com"
-		},
 		"geraint-vps": {
 			"output": "/var/www/dvbris.com",
 			"ignore": [
