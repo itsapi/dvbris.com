@@ -19,7 +19,8 @@ header {
 }
 
 .sites {
-  margin: 50px;
+  margin: 0;
+  margin-top: 50px;
   position: relative;
 
   section {
@@ -106,12 +107,12 @@ header {
 #prev, #next {
   display: none;
   position: absolute;
-  top: 25%;
+  // top: 25%;
   z-index: 50;
   width: 50px;
   height: 50px;
   line-height: 50px;
-  border-radius: 25px;
+  // border-radius: 25px;
   text-align: center;
   color: black;
   font-family: arrows;
@@ -131,11 +132,11 @@ header {
 }
 
 #prev {
-  left: -0.8em;
+  left: 0;
 }
 
 #next {
-  right: -0.8em;
+  right: 0;
 }
 
 footer {
