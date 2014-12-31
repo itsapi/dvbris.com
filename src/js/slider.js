@@ -7,6 +7,10 @@ next.style.display = 'block';
 var goal = 0;
 var loop = false;
 
+function block_s () {
+  return sites.getElementsByTagName('article')[0].offsetWidth;
+}
+
 function scroll (g) {
   goal = g;
   if (!loop) {
@@ -45,16 +49,16 @@ addEvent(sites, 'scroll', function (event) {
   }
 });
 addEvent(window, 'resize', function (event) {
-  var block = sites.getElementsByTagName('article')[0].offsetWidth;
+  var block = block_s();
   scroll(block * (Math.floor(sites.scrollLeft / block) + 1));
 });
 addEvent(prev, 'click', function (event) {
-  var block = sites.getElementsByTagName('article')[0].offsetWidth;
+  var block = block_s();
   scroll(block * Math.floor((sites.scrollLeft - 1) / block));
   event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
 addEvent(next, 'click', function (event) {
-  var block = sites.getElementsByTagName('article')[0].offsetWidth;
+  var block = block_s();
   scroll(block * (Math.floor(sites.scrollLeft / block) + 1));
   event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
