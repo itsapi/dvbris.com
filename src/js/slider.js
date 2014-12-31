@@ -22,7 +22,7 @@ function scroll_loop () {
   loop = true;
   var old = sites.scrollLeft;
   
-  sites.scrollLeft += (goal - sites.scrollLeft) / 1.7;
+  sites.scrollLeft += (goal - sites.scrollLeft) / 2;
   
   if (Math.abs(goal - sites.scrollLeft) <= 1) {
     sites.scrollLeft = goal;
