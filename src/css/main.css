@@ -21,10 +21,10 @@ body {
   position: relative;
   min-width: 300px; }
 
-a, .link, .sites section article.text a {
+a, .link, .sites article.text a {
   text-decoration: none;
   color: #0a3278; }
-  a:hover, .link:hover, .sites section article.text a:hover {
+  a:hover, .link:hover, .sites article.text a:hover {
     color: #5a82c8; }
 
 #hire {
@@ -46,47 +46,46 @@ header {
 
 .sites {
   margin: 0;
-  margin-top: 50px;
-  position: relative; }
+  margin-bottom: -15px;
+  overflow-x: scroll; }
   .sites section {
-    width: 100%;
-    display: table; }
+    display: table;
+    width: 266.66667%; }
     .sites section:not(ie) {
       table-layout: fixed; }
-    .sites section article {
-      padding: 0;
-      font-size: 1.3em;
-      display: table-cell;
-      border-left: 3px solid rgba(0, 0, 0, 0.3);
+  .sites article {
+    padding: 0;
+    font-size: 1.3em;
+    display: table-cell;
+    border-left: 3px solid rgba(0, 0, 0, 0.3);
+    width: 33.33333%;
+    background-color: #a8f000; }
+    .sites article:hover {
+      background-color: #b7ff10; }
+    .sites article:first-child {
+      background-color: #ff8900; }
+      .sites article:first-child:hover {
+        background-color: #ff971f; }
+    .sites article:nth-child(3n+1) {
+      background-color: #ff8900; }
+      .sites article:nth-child(3n+1):hover {
+        background-color: #ff971f; }
+    .sites article:nth-child(3n+2) {
       background-color: #a8f000; }
-      .sites section article.hidden {
-        display: none; }
-      .sites section article:hover {
+      .sites article:nth-child(3n+2):hover {
         background-color: #b7ff10; }
-      .sites section article:first-child {
-        background-color: #ff8900; }
-        .sites section article:first-child:hover {
-          background-color: #ff971f; }
-      .sites section article:nth-child(3n+1) {
-        background-color: #ff8900; }
-        .sites section article:nth-child(3n+1):hover {
-          background-color: #ff971f; }
-      .sites section article:nth-child(3n+2) {
-        background-color: #a8f000; }
-        .sites section article:nth-child(3n+2):hover {
-          background-color: #b7ff10; }
-      .sites section article:nth-child(3n+3) {
-        background-color: #40a5db; }
-        .sites section article:nth-child(3n+3):hover {
-          background-color: #5ab1e0; }
-      .sites section article a {
-        color: black;
-        display: block;
-        margin: 0;
-        padding: 0;
-        height: 100%; }
-        .sites section article a:hover {
-          color: black; }
+    .sites article:nth-child(3n+3) {
+      background-color: #40a5db; }
+      .sites article:nth-child(3n+3):hover {
+        background-color: #5ab1e0; }
+    .sites article a {
+      color: black;
+      display: block;
+      margin: 0;
+      padding: 0;
+      height: 100%; }
+      .sites article a:hover {
+        color: black; }
 
 .site-img-wrapper {
   width: 100%;
@@ -119,6 +118,10 @@ header {
     font-family: 'Gruppo', sans-serif;
     font-size: 3.4em;
     text-align: center; }
+
+nav {
+  height: 50px;
+  margin-bottom: -50px; }
 
 #prev, #next {
   display: none;
@@ -157,13 +160,16 @@ footer {
   header h1 {
     margin-left: 130px; }
 
+  nav {
+    display: none; }
+
   .sites {
     display: block;
-    margin: 0; }
-    .sites nav {
-      display: none; }
+    margin: 0;
+    overflow-x: auto; }
     .sites section {
-      display: block; }
+      display: block;
+      width: 100%; }
       .sites section article {
         position: relative;
         display: block;

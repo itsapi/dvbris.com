@@ -5,16 +5,18 @@
     }
   }
 
+  nav {
+    display: none;
+  }
+
   .sites {
     display: block;
     margin: 0;
-
-    nav {
-      display: none;
-    }
+    overflow-x: auto;
 
     section {
       display: block;
+      width: 100%;
 
       article {
         position: relative;

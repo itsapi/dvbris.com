@@ -20,48 +20,48 @@ header {
 
 .sites {
   margin: 0;
-  margin-top: 50px;
-  position: relative;
+  margin-bottom: -15px;
+  overflow-x: scroll;
 
   section {
-    width: 100%;
     display: table;
     &:not(ie) { table-layout: fixed; }
+    width: (8 * (100% / 3));
+  }
+  
+  article {
+    padding: 0;
+    font-size: 1.3em;
+    display: table-cell;
+    border-left: 3px solid rgba(0, 0, 0, .3);
+    width: (100% / 3);
 
-    article {
-      padding: 0;
-      font-size: 1.3em;
-      display: table-cell;
-      border-left: 3px solid rgba(0, 0, 0, .3);
-      &.hidden { display: none }
-
-      @mixin bg-hover($color) {
-        background-color: $color;
-        &:hover { background-color: lighten($color, 6%); }
-      }
-
-      $colors: #ff8900, #a8f000, #40a5db;
-      @include bg-hover(nth($colors, 2));
-      &:first-child { @include bg-hover(nth($colors, 1)); }
-      @each $color in $colors {
-        &:nth-child(3n+#{index($colors, $color)}) {
-          @include bg-hover($color);
-        }
-      }
-
-      a {
-        color: black;
-        display: block;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-
-        &:hover {
-          color: black;
-        }
-      }
-      &.text a { @extend .link; }
+    @mixin bg-hover($color) {
+      background-color: $color;
+      &:hover { background-color: lighten($color, 6%); }
     }
+
+    $colors: #ff8900, #a8f000, #40a5db;
+    @include bg-hover(nth($colors, 2));
+    &:first-child { @include bg-hover(nth($colors, 1)); }
+    @each $color in $colors {
+      &:nth-child(3n+#{index($colors, $color)}) {
+        @include bg-hover($color);
+      }
+    }
+
+    a {
+      color: black;
+      display: block;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+
+      &:hover {
+        color: black;
+      }
+    }
+    &.text a { @extend .link; }
   }
 }
 
@@ -104,6 +104,10 @@ header {
   }
 }
 
+nav {
+  height: 50px;
+  margin-bottom: -50px;
+}
 #prev, #next {
   display: none;
   position: absolute;
