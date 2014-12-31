@@ -1,49 +1,86 @@
+$loops : 0;
+@function approximateSq($num, $approx) {
+  $root : (( $num / $approx ) + $approx) / 2;
+  @return $root;
+}
+
+@function sqrt($num) {
+  $root:0;
+  $testRoot : 0;
+  $upperBounds : round($num / 2) + 1; //never need over half the main number. Add one just to be sure!
+  $loops : $upperBounds;
+  @for $test from 2 through $upperBounds {
+    $sq : $test * $test;
+    @if $sq <= $num {
+      $testRoot : $test;
+    }
+  }  
+  
+  $root : (approximateSq($num, $testRoot));
+  
+  @return $root;
+}
+
 .ribbon {
+  $size: 150px;
+  $height: 55px;
+  $font: 19px;
+  $color: #cc4125;
+  
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   margin: 0;
   overflow: hidden;
-
+  text-align: center;
+  
   a {
     display: block;
     color: white;
-    text-align: center;
 
-    /* Next two add up to 35px: */
-    font: bold 19px Sans-Serif;
-    padding: 16px 0;
+    font: bold $font sans-serif;
+    line-height: $height;
+    padding: 0;
+    width: 100%;
 
-    background-color: #cc4125;
     color: white;
     text-decoration: underline;
-
-    &:hover {
-      color: white;
-      background-color: #dc5135;
+    
+    &:before {
+      content: '';
+      display: block;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      height: $height;
+      margin-bottom: 0 - $height;
+      background-color: $color;
+    }
+    
+    &:hover:before {
+     background-color: lighten($color, 7.5%);
     }
   }
 
   @media all and (min-width: 651px) {
-    /* Total width and height, should be the same. */
-    width: 150px;
-    height: 150px;
+    width: $size;
+    height: $size;
+    line-height: $size;
 
     a {
-      transform: rotate(-45deg);
+      display: inline-block;
       position: relative;
-
-      /* Next two trial and error: */
-      right:  -30px;
-      top: 30px;
-      /* Double .ribbon-wrapper width/height. */
-      width: 250px;
-
-      float: right;
+      transform: rotate(-45deg);
+      $center: sqrt(2 * $height/1px * $height/1px);
+      top: $center * -1px/4;
+      left: $center * -1px/4;
+      width: auto;
+      &:before {
+        position: absolute;
+        left: -1 * $size;
+        width: 2 * $size;
+      }
     }
-  }
-
-  @media all and (max-width: 650px) {
-    width: 100%;
   }
 }

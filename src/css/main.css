@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "arrows";
   src: url("../fonts/arrows.eot");
@@ -44,7 +45,8 @@ header {
     margin-top: 0; }
 
 .sites {
-  margin: 50px;
+  margin: 0;
+  margin-top: 50px;
   position: relative; }
   .sites section {
     width: 100%;
@@ -91,7 +93,6 @@ header {
   text-align: center;
   padding: 15px 0;
   background-color: rgba(217, 236, 253, 0.5);
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .site-img-wrapper img {
@@ -122,18 +123,15 @@ header {
 #prev, #next {
   display: none;
   position: absolute;
-  top: 25%;
   z-index: 50;
   width: 50px;
   height: 50px;
   line-height: 50px;
-  border-radius: 25px;
   text-align: center;
   color: black;
   font-family: arrows;
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-box-shadow: 0 0 7px -2px black;
   box-shadow: 0 0 7px -2px black; }
   #prev:hover, #next:hover {
     background-color: rgba(255, 255, 255, 0.6);
@@ -143,10 +141,10 @@ header {
     background-color: rgba(230, 230, 230, 0.7) !important; }
 
 #prev {
-  left: -0.8em; }
+  left: 0; }
 
 #next {
-  right: -0.8em; }
+  right: 0; }
 
 footer {
   background-color: #5dcfc3;
@@ -211,7 +209,6 @@ footer {
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .site-img-wrapper img {
@@ -287,37 +284,47 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   margin: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
   .ribbon a {
     display: block;
     color: white;
-    text-align: center;
-    /* Next two add up to 35px: */
-    font: bold 19px Sans-Serif;
-    padding: 16px 0;
-    background-color: #cc4125;
+    font: bold 19px sans-serif;
+    line-height: 55px;
+    padding: 0;
+    width: 100%;
     color: white;
     text-decoration: underline; }
-    .ribbon a:hover {
-      color: white;
-      background-color: #dc5135; }
+    .ribbon a:before {
+      content: '';
+      display: block;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      height: 55px;
+      margin-bottom: -55px;
+      background-color: #cc4125; }
+    .ribbon a:hover:before {
+      background-color: #dc563c; }
   @media all and (min-width: 651px) {
     .ribbon {
-      /* Total width and height, should be the same. */
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      line-height: 150px; }
       .ribbon a {
+        display: inline-block;
+        position: relative;
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
-        position: relative;
-        /* Next two trial and error: */
-        right: -30px;
-        top: 30px;
-        /* Double .ribbon-wrapper width/height. */
-        width: 250px;
-        float: right; } }
-  @media all and (max-width: 650px) {
-    .ribbon {
-      width: 100%; } }
+        top: -19.44643px;
+        left: -19.44643px;
+        width: auto; }
+        .ribbon a:before {
+          position: absolute;
+          left: -150px;
+          width: 300px; } }
+
+/*# sourceMappingURL=main.css.map */
