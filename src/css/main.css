@@ -46,7 +46,7 @@ header {
 
 .sites {
   margin: 0;
-  margin-bottom: -15px;
+  margin-bottom: -20px;
   overflow-x: scroll; }
   .sites section {
     display: table;
