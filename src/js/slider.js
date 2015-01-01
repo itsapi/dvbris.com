@@ -5,7 +5,6 @@ prev.style.display = 'block';
 next.style.display = 'block';
 
 var goal = 0;
-var old_scroll = 0;
 var loop = false;
 
 function block_s () {
@@ -29,8 +28,6 @@ function scroll_loop () {
     sites.scrollLeft = goal;
   }
   
-  old_scroll = sites.scrollLeft;
-  
   if (sites.scrollLeft == goal || sites.scrollLeft == old) {
     loop = false;
     return;
@@ -40,7 +37,6 @@ function scroll_loop () {
 }
 
 addEvent(sites, 'scroll', function (event) {
-  old_scroll = sites.scrollLeft;
   if (sites.scrollLeft <= 0) {
     prev.className = 'disable';
   } else {
@@ -51,10 +47,6 @@ addEvent(sites, 'scroll', function (event) {
   } else {
     next.className = '';
   }
-});
-addEvent(window, 'resize', function (event) {
-  var block = block_s();
-  scroll(block * (Math.floor(old_scroll / block) + 1));
 });
 addEvent(prev, 'click', function (event) {
   var block = block_s();
