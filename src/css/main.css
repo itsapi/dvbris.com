@@ -181,13 +181,20 @@ footer {
     position: absolute;
     float: left;
     height: 100%;
-    width: 236px;
-    margin-right: 10px;
-    display: inline-block; }
+    width: 236px; }
     .site-img-wrapper img {
       width: 200px;
-      height: 120px; }
+      height: 120px; } }
+    @media screen and (max-width: 900px) and (min-width: 650px) {
+      .site-img-wrapper img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); } }
 
+@media screen and (max-width: 900px) {
   .site-text-wrapper {
     margin-left: 236px;
     padding: 10px;

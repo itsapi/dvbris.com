@@ -33,12 +33,17 @@
     float: left;
     height: 100%;
     width: 236px;
-    margin-right: 10px;
-    display: inline-block;
 
     img {
       width: 200px;
       height: 120px;
+      
+      @media screen and (min-width: 650px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 
