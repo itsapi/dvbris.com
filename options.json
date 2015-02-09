@@ -11,7 +11,7 @@
 			],
 			"url": "http://dvbris.com"
 		},
-		"raspberrypi": {
+		"k9": {
 			"output": "/var/www/projects/dvbris.com",
 			"url": "http://pi.dvbris.com/projects/dvbris.com"
 		}
