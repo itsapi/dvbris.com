@@ -91,6 +91,7 @@ header {
   text-align: center;
   padding: 15px 0;
   background-color: rgba(217, 236, 253, 0.5);
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .site-img-wrapper img {
@@ -134,6 +135,7 @@ nav {
   font-family: arrows;
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 0 7px -2px black;
   box-shadow: 0 0 7px -2px black; }
   #prev:hover, #next:hover {
     background-color: rgba(255, 255, 255, 0.6);
@@ -221,6 +223,7 @@ footer {
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .site-img-wrapper img {

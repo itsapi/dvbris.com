@@ -1,6 +1,7 @@
 var prev = document.getElementById('prev');
 var next = document.getElementById('next');
 var sites = document.getElementsByClassName('sites')[0];
+
 prev.style.display = 'block';
 next.style.display = 'block';
 
@@ -36,7 +37,7 @@ function scroll_loop () {
   }
 }
 
-addEvent(sites, 'scroll', function (event) {
+function updateArrows () {
   if (sites.scrollLeft <= 0) {
     prev.className = 'disable';
   } else {
@@ -47,17 +48,24 @@ addEvent(sites, 'scroll', function (event) {
   } else {
     next.className = '';
   }
+}
+
+addEvent(sites, 'scroll', function (event) {
+  updateArrows();
 });
+
 addEvent(prev, 'click', function (event) {
   var block = block_s();
   scroll(block * Math.floor((sites.scrollLeft - 1) / block));
   event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
+
 addEvent(next, 'click', function (event) {
   var block = block_s();
   scroll(block * (Math.floor(sites.scrollLeft / block) + 1));
   event.preventDefault ? event.preventDefault() : event.returnValue = false;
 });
+
 addEvent(document, 'keydown', function (e) {
   if (e.keyCode === 37) {
     prev.click();
@@ -66,3 +74,5 @@ addEvent(document, 'keydown', function (e) {
   }
   return false;
 });
+
+updateArrows();
