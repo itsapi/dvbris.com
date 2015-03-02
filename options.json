@@ -1,5 +1,6 @@
 {
 	"grunt": true,
+	"build_dir": "build",
 	"email": [
 		"mail@dvbris.com"
 	],
