@@ -20,7 +20,7 @@
   $height: 55px;
   $font: 19px;
   $color: #cc4125;
-  
+
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@
   margin: 0;
   overflow: hidden;
   text-align: center;
-  
+
   a {
     display: block;
     color: white;
@@ -40,7 +40,7 @@
 
     color: white;
     text-decoration: underline;
-    
+
     &:before {
       content: '';
       display: block;
@@ -51,7 +51,7 @@
       margin-bottom: 0 - $height;
       background-color: $color;
     }
-    
+
     &:hover:before {
      background-color: lighten($color, 7.5%);
     }
