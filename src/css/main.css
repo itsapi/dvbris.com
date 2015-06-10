@@ -91,6 +91,7 @@ header {
   text-align: center;
   padding: 15px 0;
   background-color: rgba(217, 236, 253, 0.5);
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .site-img-wrapper img {
@@ -134,6 +135,7 @@ nav {
   font-family: arrows;
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 0 7px -2px black;
   box-shadow: 0 0 7px -2px black; }
   #prev:hover, #next:hover {
     background-color: rgba(255, 255, 255, 0.6);
@@ -184,7 +186,7 @@ footer {
     .site-img-wrapper img {
       width: 200px;
       height: 120px; } }
-    @media screen and (max-width: 900px) and (min-width: 650px) {
+    @media screen and (max-width: 900px) and (min-width: 651px) {
       .site-img-wrapper img {
         position: absolute;
         top: 50%;
@@ -221,6 +223,7 @@ footer {
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .site-img-wrapper img {
@@ -241,6 +244,7 @@ footer {
   background-color: #4b4b4b;
   background-color: rgba(75, 75, 75, 0.85);
   color: white;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: none; }
   #bios aside h4 {
@@ -283,6 +287,7 @@ footer {
     z-index: auto;
     border-top: 3px solid rgba(0, 0, 0, 0.3);
     padding: 25px;
+    -webkit-transition: none;
     transition: none; }
     #bios aside.small h4 {
       font-size: 3em;
@@ -315,7 +320,7 @@ footer {
       right: 0;
       height: 55px;
       margin-bottom: -55px;
-      background-color: #CC4125; }
+      background-color: #cc4125; }
     .ribbon a:hover:before {
       background-color: #dc563c; }
   @media all and (min-width: 651px) {
@@ -336,5 +341,3 @@ footer {
           position: absolute;
           left: -150px;
           width: 300px; } }
-
-/*# sourceMappingURL=main.css.map */
