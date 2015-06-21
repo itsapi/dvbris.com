@@ -48,7 +48,16 @@ gulp.task('js', function () {
 gulp.task('html', function () {
   return gulp.src('./src/**/*.html')
     .pipe(processhtml())
-    .pipe(htmlmin())
+    .pipe(htmlmin({
+      removeComments: true,
+      collapseWhitespace: true,
+      collapseBooleanAttributes: true,
+      removeAttributeQuotes: true,
+      removeRedundantAttributes: true,
+      useShortDoctype: true,
+      removeEmptyAttributes: true,
+      removeOptionalTags: true
+    }))
     .pipe(gulp.dest('./build/'));
 });
 
