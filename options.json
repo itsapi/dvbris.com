@@ -1,5 +1,5 @@
 {
-	"grunt": true,
+	"build_cmd": "./node_modules/.bin/gulp",
 	"build_dir": "build",
 	"email": [
 		"mail@dvbris.com"
