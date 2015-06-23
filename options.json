@@ -1,5 +1,5 @@
 {
-	"build_cmd": ["npm update", "npm run build"],
+	"build_cmd": ["npm install", "npm run build"],
 	"copy_from": "build",
 	"email": [
 		"mail@dvbris.com"
