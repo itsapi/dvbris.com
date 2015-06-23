@@ -1,5 +1,5 @@
 {
-	"build_cmd": "./node_modules/.bin/gulp",
+	"build_cmd": "npm run build",
 	"build_dir": "build",
 	"email": [
 		"mail@dvbris.com"

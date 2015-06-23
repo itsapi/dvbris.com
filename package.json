@@ -2,6 +2,9 @@
   "name": "dvbris.com",
   "repository": "http://github.com/itsapi/dvbris.com.git",
   "version": "1.0.0",
+  "scripts": {
+    "build": "gulp"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
