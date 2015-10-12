@@ -1,19 +1,19 @@
 {
-	"grunt": true,
-	"build_dir": "build",
+	"build_cmd": ["npm install", "npm run build"],
+	"copy_from": "build",
 	"email": [
 		"mail@dvbris.com"
 	],
 	"hosts": {
 		"geraint-vps": {
-			"output": "/var/www/dvbris.com",
+			"copy_to": "/var/www/dvbris.com",
 			"ignore": [
 				"respawn"
 			],
 			"url": "http://dvbris.com"
 		},
 		"k9": {
-			"output": "/var/www/projects/dvbris.com",
+			"copy_to": "/var/www/projects/dvbris.com",
 			"url": "http://pi.dvbris.com/projects/dvbris.com"
 		}
 	}
