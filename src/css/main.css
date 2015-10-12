@@ -255,17 +255,29 @@ footer {
     font-size: 1.5em; }
     #bios aside p:first-of-type {
       margin-top: 0; }
-  #bios aside p a, #bios aside a.close {
+  #bios aside a.close {
     background-color: #c8c8c8;
     display: inline-block;
     border: 2px solid #b4b4b4;
     border-radius: 4px;
     padding: 7px 10px;
     margin: 5px; }
-    #bios aside p a:hover, #bios aside a.close:hover {
+    #bios aside a.close:hover {
       background-color: #bebebe;
-      border: 2px solid #afafaf;
-      cursor: pointer; }
+      border: 2px solid #afafaf; }
+  #bios aside p a {
+    display: inline-block;
+    margin: 10px;
+    padding: 0; }
+    #bios aside p a img {
+      height: 2em;
+      display: inline-block;
+      transition: -webkit-transform .02s ease-in-out;
+      transition: transform .02s ease-in-out; }
+      #bios aside p a img:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
   #bios aside a.close {
     font-size: .8em;
     position: absolute;

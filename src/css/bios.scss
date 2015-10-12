@@ -36,19 +36,34 @@
       }
     }
 
-    p a, a.close {
+
+    a.close {
       background-color: rgb(200, 200, 200);
       display: inline-block;
       border: 2px solid rgb(180, 180, 180);
       border-radius: 4px;
       padding: 7px 10px;
       margin: 5px;
-
       &:hover {
         background-color: rgb(190, 190, 190);
         border: 2px solid rgb(175, 175, 175);
-        cursor: pointer;
       }
+    }
+
+    p a {
+      display: inline-block;
+      margin: 10px;
+      padding: 0;
+
+      img {
+        height: 2em;
+        display: inline-block;
+        transition: transform .02s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
     }
 
     a.close {
