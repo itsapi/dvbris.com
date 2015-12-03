@@ -10,11 +10,11 @@
 			"ignore": [
 				"respawn"
 			],
-			"url": "http://dvbris.com"
+			"url": "https://dvbris.com"
 		},
 		"k9": {
 			"copy_to": "/var/www/projects/dvbris.com",
-			"url": "http://pi.dvbris.com/projects/dvbris.com"
+			"url": "https://pi.dvbris.com/projects/dvbris.com"
 		}
 	}
 }

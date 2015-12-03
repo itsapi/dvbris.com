@@ -1,6 +1,6 @@
 {
   "name": "dvbris.com",
-  "repository": "http://github.com/itsapi/dvbris.com.git",
+  "repository": "https://github.com/itsapi/dvbris.com.git",
   "version": "1.0.0",
   "scripts": {
     "build": "gulp"
