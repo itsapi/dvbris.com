@@ -23,10 +23,12 @@ header {
   margin-bottom: -20px;
   overflow-x: scroll;
 
+  $num_articles: 8;
+
   section {
     display: table;
     &:not(ie) { table-layout: fixed; }
-    width: (8 * (100% / 3));
+    width: ($num_articles * (100% / 3));
   }
 
   article {
@@ -34,7 +36,7 @@ header {
     font-size: 1.3em;
     display: table-cell;
     border-left: 3px solid rgba(0, 0, 0, .3);
-    width: (100% / 3);
+    width: 100%;
 
     @mixin bg-hover($color) {
       background-color: $color;
