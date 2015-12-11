@@ -36,7 +36,7 @@ header {
     font-size: 1.3em;
     display: table-cell;
     border-left: 3px solid rgba(0, 0, 0, .3);
-    width: 100%;
+    width: 100% / 3;
 
     @mixin bg-hover($color) {
       background-color: $color;
