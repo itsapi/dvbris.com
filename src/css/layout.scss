@@ -26,7 +26,7 @@ header {
   section {
     display: table;
     &:not(ie) { table-layout: fixed; }
-    width: (8 * (100% / 3));
+    width: (9 * (100% / 3));
   }
 
   article {
