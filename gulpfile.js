@@ -9,39 +9,30 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     minify = require('gulp-minify-css'),
     prefix = require('gulp-autoprefixer'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    browserify = require('gulp-browserify');
 
 
 gulp.task('css', function () {
   return gulp.src('./src/css/main.scss')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(prefix())
     .pipe(minify())
     .pipe(rename('main.min.css'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css/'));
 });
 
-gulp.task('css-dev', function () {
-  return gulp.src('./src/css/main.scss')
-    .pipe(sourcemaps.init())
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(prefix())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./src/css/'));
-});
-
 gulp.task('js', function () {
-  return gulp.src([
-    'polyfills.js',
-    'utils.js',
-    'bios.js',
-    'slider.js',
-    'google.js',
-    'pingdom.js'
-  ], {cwd: './src/js/'})
-    .pipe(concat('main.min.js'))
+  return gulp.src('./src/js/main.js')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(browserify())
     .pipe(uglify())
+    .pipe(rename('main.min.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/js/'));
 });
 
@@ -76,8 +67,9 @@ gulp.task('reload', function () {
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('./src/css/*.scss', ['css-dev']);
-  gulp.watch('./src/**/*', ['reload']);
+  gulp.watch('./src/css/**/*.scss', ['css']);
+  gulp.watch('./src/js/**/*.js', ['js']);
+  gulp.watch('./src/**/*', ['copy', 'reload']);
 });
 
 gulp.task('default', ['css', 'js', 'html', 'copy']);

@@ -1,4 +1,4 @@
-function addEvent(elem, type, eventHandle) {
+exports.addEvent = function(elem, type, eventHandle) {
     if (elem == null || typeof(elem) == 'undefined') return
     if (elem.addEventListener) {
         elem.addEventListener(type, eventHandle, false)
@@ -9,7 +9,7 @@ function addEvent(elem, type, eventHandle) {
     }
 }
 
-function addAfter(elem, add) {
+exports.addAfter = function(elem, add) {
     if (elem.nextSibling) {
         elem.parentNode.insertBefore(add, elem.nextSibling)
     } else {
@@ -17,7 +17,7 @@ function addAfter(elem, add) {
     }
 }
 
-function makeRequest(url, cb) {
+exports.makeRequest = function(url, cb) {
     // IE8 & 9 only Cross domain JSON GET request
     if ('XDomainRequest' in window && window.XDomainRequest !== null) {
         var xdr = new XDomainRequest() // Use Microsoft XDR

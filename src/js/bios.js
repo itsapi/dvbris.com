@@ -1,3 +1,6 @@
+var utils = require('./utils');
+
+
 function link_bios(links, bios) {
 
     var names = []
@@ -64,14 +67,14 @@ names.forEach(function (name) {
     name.close_btn.classList.add('close')
     name.close_btn.innerHTML = 'Close'
     name.bio.appendChild(name.close_btn)
-    addEvent(name.close_btn, 'click', function (event) {
+    utils.addEvent(name.close_btn, 'click', function (event) {
         hide_all(names)
         event.preventDefault ? event.preventDefault() : event.returnValue = false
     })
 
     var p = document.createElement('p')
     var h4 = name.bio.getElementsByTagName('h4')[0]
-    makeRequest(
+    utils.makeRequest(
         'https://node.dvbris.com/twitter?api_url=' +
             encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
         function (data) {
@@ -79,9 +82,9 @@ names.forEach(function (name) {
             p.innerText = description
         }
     )
-    addAfter(h4, p)
+    utils.addAfter(h4, p)
 
-    addEvent(name.anchor, 'click', function (event) {
+    utils.addEvent(name.anchor, 'click', function (event) {
         if (!check_size()) {
             if (name.bio.classList.contains('closed')){
                 hide_all(names)
@@ -97,19 +100,19 @@ names.forEach(function (name) {
         }
     })
 
-    addEvent(name.bio, 'click', function (event) {
+    utils.addEvent(name.bio, 'click', function (event) {
         if (event.stopPropagation) event.stopPropagation()
     })
 })
-addEvent(document, 'click', function (event) {
+utils.addEvent(document, 'click', function (event) {
     hide_all(names)
 })
-addEvent(document, 'keydown', function (event) {
+utils.addEvent(document, 'keydown', function (event) {
     if (event.keyCode === 27) {
         hide_all(names)
     }
 })
-addEvent(window, 'resize', function () {
+utils.addEvent(window, 'resize', function () {
     on_resize(names)
 })
 on_resize(names)
