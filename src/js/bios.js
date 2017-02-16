@@ -75,7 +75,7 @@ names.forEach(function (name) {
     var p = document.createElement('p')
     var h4 = name.bio.getElementsByTagName('h4')[0]
     utils.makeRequest(
-        'https://node.dvbris.com/twitter?api_url=' +
+        'https://twitter.oliverfaircliff.com/twitter?api_url=' +
             encodeURIComponent('https://api.twitter.com/1.1/users/show.json?screen_name=' + name.bio.id),
         function (data) {
             var description = JSON.parse(data).description
